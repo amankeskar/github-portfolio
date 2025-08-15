@@ -1,0 +1,199 @@
+/* Custom styles for DataPro Portfolio */
+
+/* Smooth scrolling */
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: 'Inter', system-ui, sans-serif;
+}
+
+/* Gradient text utility */
+.gradient-text {
+    background: linear-gradient(to right, #60a5fa, #a78bfa);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+}
+
+/* Card hover effects */
+.card-hover {
+    transition: all 0.3s ease;
+}
+
+.card-hover:hover {
+    box-shadow: 0 20px 25px -5px rgba(59, 130, 246, 0.2);
+    transform: translateY(-2px);
+}
+
+/* Skill bar animations */
+.skill-bar {
+    transition: width 2s ease-in-out;
+}
+
+/* Hero background */
+.hero-bg {
+    background-image: 
+        linear-gradient(rgba(30, 58, 138, 0.9), rgba(109, 40, 217, 0.7)), 
+        url('https://images.unsplash.com/photo-1551288049-bebda4e38f71?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80');
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+}
+
+/* Mobile menu animation */
+.mobile-menu {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.3s ease-in-out;
+}
+
+.mobile-menu.active {
+    max-height: 300px;
+}
+
+/* Button animations */
+button {
+    transition: all 0.3s ease;
+}
+
+button:hover {
+    transform: translateY(-1px);
+}
+
+/* Link hover effects */
+a {
+    transition: all 0.3s ease;
+}
+
+/* Form focus styles */
+input:focus, textarea:focus, select:focus {
+    outline: none;
+    border-color: #3b82f6;
+    box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.1);
+}
+
+/* Responsive typography */
+@media (max-width: 768px) {
+    .hero-title {
+        font-size: 2.5rem;
+        line-height: 1.1;
+    }
+    
+    .hero-bg {
+        background-attachment: scroll;
+    }
+}
+
+@media (max-width: 640px) {
+    .hero-title {
+        font-size: 2rem;
+    }
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+    width: 8px;
+}
+
+::-webkit-scrollbar-track {
+    background: #1f2937;
+}
+
+::-webkit-scrollbar-thumb {
+    background: #4b5563;
+    border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: #6b7280;
+}
+
+/* Loading animations */
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.fade-in-up {
+    animation: fadeInUp 0.6s ease-out;
+}
+
+/* Project card animations */
+.project-card {
+    opacity: 1;
+    transform: scale(1);
+    transition: all 0.3s ease;
+}
+
+.project-card[style*="display: none"] {
+    opacity: 0;
+    transform: scale(0.95);
+}
+
+/* Stats counter animation */
+@keyframes countUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.stat-card {
+    animation: countUp 0.8s ease-out;
+}
+
+/* Experience timeline */
+.timeline-dot {
+    transition: all 0.3s ease;
+}
+
+.timeline-dot:hover {
+    transform: scale(1.2);
+}
+
+/* Social links hover */
+.social-link {
+    transition: all 0.3s ease;
+}
+
+.social-link:hover {
+    transform: translateY(-2px) scale(1.1);
+}
+
+/* Loading state for images */
+img {
+    transition: opacity 0.3s ease;
+}
+
+img[data-loading="true"] {
+    opacity: 0.5;
+}
+
+/* Print styles */
+@media print {
+    .no-print {
+        display: none !important;
+    }
+    
+    body {
+        background: white !important;
+        color: black !important;
+    }
+    
+    .bg-gray-800, .bg-gray-900 {
+        background: white !important;
+        border: 1px solid #ccc !important;
+    }
+}

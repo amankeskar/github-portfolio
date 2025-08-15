@@ -1,0 +1,1567 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aman Keskar - Data Analyst | MS Information Systems | Ex-TCS</title>
+    <meta name="description" content="Data Analyst with MS in Information Systems from Syracuse University. Expertise in Power BI, SQL, Python, Machine Learning, and Data Engineering. Previously at TCS with $1.2M+ revenue impact.">
+    <meta name="keywords" content="Aman Keskar, Data Analyst, Syracuse University, Power BI, SQL, Python, Machine Learning, TCS, Data Science, Business Intelligence">
+    <meta name="author" content="Aman Keskar">
+    
+    <!-- Open Graph Meta Tags -->
+    <meta property="og:title" content="Aman Keskar - Data Analyst Portfolio">
+    <meta property="og:description" content="MS Information Systems graduate specializing in data analytics, machine learning, and business intelligence solutions.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://amankeskar.github.io/github-portfolio">
+    
+    <!-- Twitter Card Meta Tags -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Aman Keskar - Data Analyst Portfolio">
+    <meta name="twitter:description" content="MS Information Systems graduate specializing in data analytics and business intelligence.">
+    
+    <!-- Favicon -->
+    <link rel="icon" type="image/svg+xml" href="public/vite.svg">
+    
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@3.5.0/fonts/remixicon.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        html {
+            scroll-behavior: smooth;
+        }
+        
+        body {
+            font-family: 'Inter', system-ui, sans-serif;
+        }
+        
+        .gradient-text {
+            background: linear-gradient(to right, #60a5fa, #a78bfa);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+        
+        /* Custom Dark Blue Color Classes */
+        .bg-dark-blue {
+            background-color: #141857;
+        }
+        
+        .bg-dark-blue:hover {
+            background-color: #0f1242;
+        }
+        
+        .text-dark-blue {
+            color: #141857;
+        }
+        
+        .border-dark-blue {
+            border-color: #141857;
+        }
+        
+        .card-hover {
+            transition: all 0.3s ease;
+        }
+        
+        .card-hover:hover {
+            box-shadow: 0 20px 25px -5px rgba(20, 24, 87, 0.2);
+        }
+        
+        .skill-bar {
+            transition: width 2s ease-in-out;
+        }
+        
+        .hero-bg {
+            background-image: 
+                linear-gradient(rgba(30, 58, 138, 0.9), rgba(109, 40, 217, 0.7)), 
+                url('https://images.unsplash.com/photo-1551288049-bebda4e38f71?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80');
+            background-size: cover;
+            background-position: center;
+        }
+        
+        .mobile-menu {
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.3s ease-in-out;
+        }
+        
+        .mobile-menu.active {
+            max-height: 300px;
+        }
+        
+        @media (max-width: 768px) {
+            .hero-title {
+                font-size: 2.5rem;
+            }
+        }
+    </style>
+    
+    <!-- Chart.js CDN -->
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body class="min-h-screen bg-gray-900">
+    <!-- Header -->
+    <header class="bg-gray-800 shadow-sm border-b border-gray-700 sticky top-0 z-50">
+        <div class="max-w-7xl mx-auto px-6 py-4">
+            <div class="flex items-center justify-between w-full">
+                <!-- Far Left - Name and logo only -->
+                <div class="flex items-center space-x-3 flex-shrink-0">
+                    <div class="w-10 h-10 bg-dark-blue rounded-lg flex items-center justify-center">
+                        <i class="ri-bar-chart-line text-white text-xl"></i>
+                    </div>
+                    <div>
+                        <h1 class="text-xl font-bold text-white">Aman Keskar</h1>
+                        <p class="text-sm text-gray-400">Data Analyst Portfolio</p>
+                    </div>
+                </div>
+                
+                <!-- Far Right - Everything else -->
+                <div class="flex items-center space-x-6">
+                    <!-- Navigation Menu -->
+                    <nav class="hidden md:flex items-center space-x-6">
+                        <a href="#overview" class="text-gray-300 hover:text-blue-400 font-medium transition-colors">Overview</a>
+                        <a href="#skills" class="text-gray-300 hover:text-blue-400 font-medium transition-colors">Skills</a>
+                        <a href="#projects" class="text-gray-300 hover:text-blue-400 font-medium transition-colors">Projects</a>
+                        <a href="#experience" class="text-gray-300 hover:text-blue-400 font-medium transition-colors">Experience</a>
+                        <a href="#contact" class="text-gray-300 hover:text-blue-400 font-medium transition-colors">Contact</a>
+                    </nav>
+                    
+                    <!-- Available for hire status -->
+                    <div class="hidden md:flex items-center space-x-2 text-sm text-gray-400">
+                        <div class="w-2 h-2 bg-green-500 rounded-full"></div>
+                        <span>Available for hire</span>
+                    </div>
+                    
+                    <!-- Mobile menu button -->
+                    <button id="mobile-menu-btn" class="md:hidden w-8 h-8 flex items-center justify-center text-gray-300">
+                        <i class="ri-menu-line text-xl"></i>
+                    </button>
+                </div>
+            </div>
+            
+            <!-- Mobile menu -->
+            <div id="mobile-menu" class="md:hidden mobile-menu border-t border-gray-700 pt-4">
+                <nav class="flex flex-col space-y-2">
+                    <a href="#overview" class="text-gray-300 hover:text-blue-400 font-medium transition-colors py-2">Overview</a>
+                    <a href="#skills" class="text-gray-300 hover:text-blue-400 font-medium transition-colors py-2">Skills</a>
+                    <a href="#projects" class="text-gray-300 hover:text-blue-400 font-medium transition-colors py-2">Projects</a>
+                    <a href="#experience" class="text-gray-300 hover:text-blue-400 font-medium transition-colors py-2">Experience</a>
+                    <a href="#contact" class="text-gray-300 hover:text-blue-400 font-medium transition-colors py-2">Contact</a>
+                </nav>
+            </div>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section id="overview" class="relative hero-bg text-white overflow-hidden">
+        <div class="absolute inset-0 bg-gradient-to-r from-blue-900/90 to-purple-900/70"></div>
+        <div class="relative max-w-7xl mx-auto px-6 py-20">
+            <div class="max-w-3xl"> <!-- Content container stays left-aligned -->
+                <div class="flex items-center space-x-3 mb-6">
+                    <div class="w-12 h-12 bg-white/20 backdrop-blur-sm rounded-lg flex items-center justify-center">
+                        <i class="ri-user-3-line text-white text-2xl"></i>
+                    </div>
+                    <div>
+                        <h2 class="text-lg font-semibold">Aman Keskar</h2>
+                        <p class="text-blue-200">Data Analyst & MS Information Systems Graduate</p>
+                    </div>
+                </div>
+                
+                <h1 class="hero-title text-5xl md:text-6xl font-bold mb-6 leading-tight">
+                    Transforming Data Into
+                    <span class="text-yellow-400"> Strategic Insights</span>
+                </h1>
+                
+                <p class="text-xl text-blue-100 mb-8 leading-relaxed">
+                    MS in Information Systems from Syracuse University with expertise in Power BI, SQL, 
+                    machine learning, and data engineering. Previously at Tata Consultancy Services, 
+                    delivering data solutions that drive business growth and operational efficiency.
+                </p>
+                
+                <div class="flex flex-wrap gap-4 mb-8">
+                    <div class="flex items-center space-x-2 bg-white/10 backdrop-blur-sm rounded-full px-4 py-2">
+                        <i class="ri-graduation-cap-line text-yellow-400"></i>
+                        <span>Syracuse University MS</span>
+                    </div>
+                    <div class="flex items-center space-x-2 bg-white/10 backdrop-blur-sm rounded-full px-4 py-2">
+                        <i class="ri-building-line text-green-400"></i>
+                        <span>Ex-TCS Data Analyst</span>
+                    </div>
+                    <div class="flex items-center space-x-2 bg-white/10 backdrop-blur-sm rounded-full px-4 py-2">
+                        <i class="ri-bar-chart-fill text-blue-400"></i>
+                        <span>$1.2M+ Revenue Impact</span>
+                    </div>
+                </div>
+                
+                <div class="flex flex-wrap gap-4">
+                    <a href="#contact" class="bg-white text-blue-600 px-8 py-3 rounded-lg font-semibold hover:bg-blue-50 transition-colors whitespace-nowrap cursor-pointer inline-flex items-center">
+                        <i class="ri-mail-line mr-2"></i>Get In Touch
+                    </a>
+                    <a href="https://github.com/amankeskar" target="_blank" rel="noopener noreferrer" class="border-2 border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-blue-600 transition-colors whitespace-nowrap cursor-pointer inline-flex items-center">
+                        <i class="ri-github-line mr-2"></i>View GitHub
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Stats Section -->
+    <section class="py-16 bg-gray-900">
+        <div class="max-w-7xl mx-auto px-6">
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+                <div class="bg-gray-800 border border-gray-700 rounded-xl p-6 shadow-sm hover:shadow-md transition-shadow card-hover">
+                    <div class="flex items-center justify-between mb-4">
+                        <div class="w-12 h-12 bg-gradient-to-br from-green-500 to-emerald-600 rounded-lg flex items-center justify-center">
+                            <i class="ri-money-dollar-circle-line text-white text-2xl"></i>
+                        </div>
+                        <div class="flex items-center space-x-1 text-sm font-medium text-green-400">
+                            <i class="ri-arrow-up-line"></i>
+                            <span>+23%</span>
+                        </div>
+                    </div>
+                    <div class="mb-2">
+                        <h3 class="text-3xl font-bold text-white mb-1">$2.1M</h3>
+                        <h4 class="text-lg font-semibold text-gray-300">Revenue Generated</h4>
+                    </div>
+                    <p class="text-gray-400 text-sm">Direct business impact from data projects</p>
+                </div>
+
+                <div class="bg-gray-800 border border-gray-700 rounded-xl p-6 shadow-sm hover:shadow-md transition-shadow card-hover">
+                    <div class="flex items-center justify-between mb-4">
+                        <div class="w-12 h-12 bg-gradient-to-br from-blue-500 to-cyan-600 rounded-lg flex items-center justify-center">
+                            <i class="ri-folder-chart-line text-white text-2xl"></i>
+                        </div>
+                        <div class="flex items-center space-x-1 text-sm font-medium text-green-400">
+                            <i class="ri-arrow-up-line"></i>
+                            <span>+12%</span>
+                        </div>
+                    </div>
+                    <div class="mb-2">
+                        <h3 class="text-3xl font-bold text-white mb-1">47</h3>
+                        <h4 class="text-lg font-semibold text-gray-300">Projects Delivered</h4>
+                    </div>
+                    <p class="text-gray-400 text-sm">Successfully completed analytics initiatives</p>
+                </div>
+
+                <div class="bg-gray-800 border border-gray-700 rounded-xl p-6 shadow-sm hover:shadow-md transition-shadow card-hover">
+                    <div class="flex items-center justify-between mb-4">
+                        <div class="w-12 h-12 bg-gradient-to-br from-purple-500 to-indigo-600 rounded-lg flex items-center justify-center">
+                            <i class="ri-save-line text-white text-2xl"></i>
+                        </div>
+                        <div class="flex items-center space-x-1 text-sm font-medium text-green-400">
+                            <i class="ri-arrow-up-line"></i>
+                            <span>+18%</span>
+                        </div>
+                    </div>
+                    <div class="mb-2">
+                        <h3 class="text-3xl font-bold text-white mb-1">$850K</h3>
+                        <h4 class="text-lg font-semibold text-gray-300">Cost Savings</h4>
+                    </div>
+                    <p class="text-gray-400 text-sm">Operational efficiency improvements</p>
+                </div>
+
+                <div class="bg-gray-800 border border-gray-700 rounded-xl p-6 shadow-sm hover:shadow-md transition-shadow card-hover">
+                    <div class="flex items-center justify-between mb-4">
+                        <div class="w-12 h-12 bg-gradient-to-br from-orange-500 to-red-600 rounded-lg flex items-center justify-center">
+                            <i class="ri-target-line text-white text-2xl"></i>
+                        </div>
+                        <div class="flex items-center space-x-1 text-sm font-medium text-green-400">
+                            <i class="ri-arrow-up-line"></i>
+                            <span>+5.3%</span>
+                        </div>
+                    </div>
+                    <div class="mb-2">
+                        <h3 class="text-3xl font-bold text-white mb-1">94.2%</h3>
+                        <h4 class="text-lg font-semibold text-gray-300">Model Accuracy</h4>
+                    </div>
+                    <p class="text-gray-400 text-sm">Average ML model performance</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Skills Section -->
+    <section id="skills" class="py-20 bg-gray-900">
+        <div class="max-w-7xl mx-auto px-6">
+            <div class="text-center mb-16">
+                <div class="flex items-center justify-center mb-4">
+                    <div class="w-12 h-12 bg-indigo-100 rounded-lg flex items-center justify-center mr-3">
+                        <i class="ri-code-s-slash-line text-indigo-600 text-2xl"></i>
+                    </div>
+                    <h2 class="text-4xl font-bold text-white">Skills Matrix</h2>
+                </div>
+                <p class="text-gray-400 text-lg max-w-2xl mx-auto">
+                    Technical proficiency across data analytics, machine learning, and business intelligence
+                </p>
+            </div>
+
+            <div class="bg-gray-800 border border-gray-700 rounded-xl p-8 shadow-sm">
+                <div class="space-y-8">
+                    <!-- Programming & Analytics -->
+                    <div>
+                        <h4 class="text-lg font-semibold text-gray-200 mb-4">Programming & Analytics</h4>
+                        <div class="space-y-4">
+                            <div class="flex items-center justify-between">
+                                <span class="text-gray-300 font-medium">Python</span>
+                                <div class="flex items-center space-x-3">
+                                    <div class="w-32 bg-gray-700 rounded-full h-2">
+                                        <div class="h-2 rounded-full bg-emerald-500 skill-bar" style="width: 0%" data-width="95"></div>
+                                    </div>
+                                    <span class="text-sm font-semibold text-gray-400 w-10 text-right">95%</span>
+                                </div>
+                            </div>
+                            <div class="flex items-center justify-between">
+                                <span class="text-gray-300 font-medium">SQL (T-SQL, MySQL, PostgreSQL)</span>
+                                <div class="flex items-center space-x-3">
+                                    <div class="w-32 bg-gray-700 rounded-full h-2">
+                                        <div class="h-2 rounded-full bg-emerald-500 skill-bar" style="width: 0%" data-width="92"></div>
+                                    </div>
+                                    <span class="text-sm font-semibold text-gray-400 w-10 text-right">92%</span>
+                                </div>
+                            </div>
+                            <div class="flex items-center justify-between">
+                                <span class="text-gray-300 font-medium">R</span>
+                                <div class="flex items-center space-x-3">
+                                    <div class="w-32 bg-gray-700 rounded-full h-2">
+                                        <div class="h-2 rounded-full bg-blue-500 skill-bar" style="width: 0%" data-width="85"></div>
+                                    </div>
+                                    <span class="text-sm font-semibold text-gray-400 w-10 text-right">85%</span>
+                                </div>
+                            </div>
+                            <div class="flex items-center justify-between">
+                                <span class="text-gray-300 font-medium">DAX</span>
+                                <div class="flex items-center space-x-3">
+                                    <div class="w-32 bg-gray-700 rounded-full h-2">
+                                        <div class="h-2 rounded-full bg-blue-500 skill-bar" style="width: 0%" data-width="88"></div>
+                                    </div>
+                                    <span class="text-sm font-semibold text-gray-400 w-10 text-right">88%</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Machine Learning & Analytics -->
+                    <div>
+                        <h4 class="text-lg font-semibold text-gray-200 mb-4">Machine Learning & Analytics</h4>
+                        <div class="space-y-4">
+                            <div class="flex items-center justify-between">
+                                <span class="text-gray-300 font-medium">Scikit-learn</span>
+                                <div class="flex items-center space-x-3">
+                                    <div class="w-32 bg-gray-700 rounded-full h-2">
+                                        <div class="h-2 rounded-full bg-emerald-500 skill-bar" style="width: 0%" data-width="93"></div>
+                                    </div>
+                                    <span class="text-sm font-semibold text-gray-400 w-10 text-right">93%</span>
+                                </div>
+                            </div>
+                            <div class="flex items-center justify-between">
+                                <span class="text-gray-300 font-medium">XGBoost</span>
+                                <div class="flex items-center space-x-3">
+                                    <div class="w-32 bg-gray-700 rounded-full h-2">
+                                        <div class="h-2 rounded-full bg-emerald-500 skill-bar" style="width: 0%" data-width="90"></div>
+                                    </div>
+                                    <span class="text-sm font-semibold text-gray-400 w-10 text-right">90%</span>
+                                </div>
+                            </div>
+                            <div class="flex items-center justify-between">
+                                <span class="text-gray-300 font-medium">pandas & numpy</span>
+                                <div class="flex items-center space-x-3">
+                                    <div class="w-32 bg-gray-700 rounded-full h-2">
+                                        <div class="h-2 rounded-full bg-emerald-500 skill-bar" style="width: 0%" data-width="95"></div>
+                                    </div>
+                                    <span class="text-sm font-semibold text-gray-400 w-10 text-right">95%</span>
+                                </div>
+                            </div>
+                            <div class="flex items-center justify-between">
+                                <span class="text-gray-300 font-medium">statsmodels</span>
+                                <div class="flex items-center space-x-3">
+                                    <div class="w-32 bg-gray-700 rounded-full h-2">
+                                        <div class="h-2 rounded-full bg-blue-500 skill-bar" style="width: 0%" data-width="87"></div>
+                                    </div>
+                                    <span class="text-sm font-semibold text-gray-400 w-10 text-right">87%</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- BI & Visualization -->
+                    <div>
+                        <h4 class="text-lg font-semibold text-gray-200 mb-4">BI & Visualization</h4>
+                        <div class="space-y-4">
+                            <div class="flex items-center justify-between">
+                                <span class="text-gray-300 font-medium">Power BI (DAX, Power Query, RLS)</span>
+                                <div class="flex items-center space-x-3">
+                                    <div class="w-32 bg-gray-700 rounded-full h-2">
+                                        <div class="h-2 rounded-full bg-emerald-500 skill-bar" style="width: 0%" data-width="96"></div>
+                                    </div>
+                                    <span class="text-sm font-semibold text-gray-400 w-10 text-right">96%</span>
+                                </div>
+                            </div>
+                            <div class="flex items-center justify-between">
+                                <span class="text-gray-300 font-medium">Tableau</span>
+                                <div class="flex items-center space-x-3">
+                                    <div class="w-32 bg-gray-700 rounded-full h-2">
+                                        <div class="h-2 rounded-full bg-emerald-500 skill-bar" style="width: 0%" data-width="91"></div>
+                                    </div>
+                                    <span class="text-sm font-semibold text-gray-400 w-10 text-right">91%</span>
+                                </div>
+                            </div>
+                            <div class="flex items-center justify-between">
+                                <span class="text-gray-300 font-medium">Excel (Power Pivot)</span>
+                                <div class="flex items-center space-x-3">
+                                    <div class="w-32 bg-gray-700 rounded-full h-2">
+                                        <div class="h-2 rounded-full bg-blue-500 skill-bar" style="width: 0%" data-width="89"></div>
+                                    </div>
+                                    <span class="text-sm font-semibold text-gray-400 w-10 text-right">89%</span>
+                                </div>
+                            </div>
+                            <div class="flex items-center justify-between">
+                                <span class="text-gray-300 font-medium">Streamlit</span>
+                                <div class="flex items-center space-x-3">
+                                    <div class="w-32 bg-gray-700 rounded-full h-2">
+                                        <div class="h-2 rounded-full bg-blue-500 skill-bar" style="width: 0%" data-width="84"></div>
+                                    </div>
+                                    <span class="text-sm font-semibold text-gray-400 w-10 text-right">84%</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Data Engineering & Cloud -->
+                    <div>
+                        <h4 class="text-lg font-semibold text-gray-200 mb-4">Data Engineering & Cloud</h4>
+                        <div class="space-y-4">
+                            <div class="flex items-center justify-between">
+                                <span class="text-gray-300 font-medium">Snowflake</span>
+                                <div class="flex items-center space-x-3">
+                                    <div class="w-32 bg-gray-700 rounded-full h-2">
+                                        <div class="h-2 rounded-full bg-emerald-500 skill-bar" style="width: 0%" data-width="89"></div>
+                                    </div>
+                                    <span class="text-sm font-semibold text-gray-400 w-10 text-right">89%</span>
+                                </div>
+                            </div>
+                            <div class="flex items-center justify-between">
+                                <span class="text-gray-300 font-medium">Azure Synapse/Fabric</span>
+                                <div class="flex items-center space-x-3">
+                                    <div class="w-32 bg-gray-700 rounded-full h-2">
+                                        <div class="h-2 rounded-full bg-blue-500 skill-bar" style="width: 0%" data-width="85"></div>
+                                    </div>
+                                    <span class="text-sm font-semibold text-gray-400 w-10 text-right">85%</span>
+                                </div>
+                            </div>
+                            <div class="flex items-center justify-between">
+                                <span class="text-gray-300 font-medium">dbt & Apache Spark</span>
+                                <div class="flex items-center space-x-3">
+                                    <div class="w-32 bg-gray-700 rounded-full h-2">
+                                        <div class="h-2 rounded-full bg-blue-500 skill-bar" style="width: 0%" data-width="82"></div>
+                                    </div>
+                                    <span class="text-sm font-semibold text-gray-400 w-10 text-right">82%</span>
+                                </div>
+                            </div>
+                            <div class="flex items-center justify-between">
+                                <span class="text-gray-300 font-medium">Docker</span>
+                                <div class="flex items-center space-x-3">
+                                    <div class="w-32 bg-gray-700 rounded-full h-2">
+                                        <div class="h-2 rounded-full bg-yellow-500 skill-bar" style="width: 0%" data-width="78"></div>
+                                    </div>
+                                    <span class="text-sm font-semibold text-gray-400 w-10 text-right">78%</span>
+                                </div>
+                            </div>
+                            <div class="flex items-center justify-between">
+                                <span class="text-gray-300 font-medium">GenAI (LangChain, RAG)</span>
+                                <div class="flex items-center space-x-3">
+                                    <div class="w-32 bg-gray-700 rounded-full h-2">
+                                        <div class="h-2 rounded-full bg-purple-500 skill-bar" style="width: 0%" data-width="88"></div>
+                                    </div>
+                                    <span class="text-sm font-semibold text-gray-400 w-10 text-right">88%</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Projects Section -->
+        <div class="bg-gray-800 border border-gray-700 rounded-xl p-8 shadow-sm">
+            <div class="flex items-center justify-between mb-6">
+                <div class="flex items-center">
+                    <div class="w-10 h-10 bg-blue-100 rounded-lg flex items-center justify-center mr-3">
+                        <i class="ri-radar-line text-blue-600 text-xl"></i>
+                    </div>
+                    <div>
+                        <h3 class="text-2xl font-bold text-white">Skills Analytics</h3>
+                        <p class="text-gray-400">Technical proficiency breakdown</p>
+                    </div>
+                </div>
+                <div class="flex items-center space-x-4">
+                    <div class="flex items-center space-x-2">
+                        <div class="w-3 h-3 bg-blue-500 rounded-full"></div>
+                        <span class="text-sm text-gray-400">Proficiency Level (%)</span>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="h-96 bg-gray-800 rounded-lg p-4 mb-6">
+                <canvas id="performanceChart" width="900" height="400"></canvas>
+            </div>
+            
+            <div class="grid grid-cols-3 gap-4 pt-6 border-t border-gray-700">
+                <div class="text-center">
+                    <div class="text-2xl font-bold text-white">$1.2M</div>
+                    <div class="text-sm text-gray-400">Total Revenue Impact</div>
+                </div>
+                <div class="text-center">
+                    <div class="text-2xl font-bold text-white">34</div>
+                    <div class="text-sm text-gray-400">Projects Completed</div>
+                </div>
+                <div class="text-center">
+                    <div class="text-2xl font-bold text-white">98%</div>
+                    <div class="text-sm text-gray-400">Client Satisfaction</div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Projects Section -->
+    <section id="projects" class="bg-gray-900 py-16">
+        <div class="max-w-7xl mx-auto px-6">
+            <div class="text-center mb-12">
+                <div class="flex items-center justify-center mb-4">
+                    <div class="w-12 h-12 bg-blue-100 rounded-lg flex items-center justify-center mr-3">
+                        <i class="ri-folder-chart-line text-blue-600 text-2xl"></i>
+                    </div>
+                    <h2 class="text-4xl font-bold text-white">Featured Projects</h2>
+                </div>
+                <p class="text-xl text-gray-400 max-w-3xl mx-auto">
+                    Showcasing projects that delivered measurable business impact and 
+                    drove strategic decision-making.
+                </p>
+            </div>
+
+            <div class="flex flex-wrap justify-center gap-2 mb-8">
+                <button class="filter-btn px-4 py-2 rounded-full text-sm font-medium transition-colors whitespace-nowrap cursor-pointer bg-dark-blue text-white" data-filter="all">
+                    All Projects (6)
+                </button>
+                <button class="filter-btn px-4 py-2 rounded-full text-sm font-medium transition-colors whitespace-nowrap cursor-pointer bg-gray-800 text-gray-400 hover:bg-gray-700 hover:text-gray-300" data-filter="ml">
+                    Machine Learning (3)
+                </button>
+                <button class="filter-btn px-4 py-2 rounded-full text-sm font-medium transition-colors whitespace-nowrap cursor-pointer bg-gray-800 text-gray-400 hover:bg-gray-700 hover:text-gray-300" data-filter="analytics">
+                    Analytics (3)
+                </button>
+                <button class="filter-btn px-4 py-2 rounded-full text-sm font-medium transition-colors whitespace-nowrap cursor-pointer bg-gray-800 text-gray-400 hover:bg-gray-700 hover:text-gray-300" data-filter="visualization">
+                    Visualization (6)
+                </button>
+            </div>
+
+            <div id="projects-grid" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Project 1 -->
+                <div class="project-card bg-gray-800 border border-gray-700 rounded-xl overflow-hidden shadow-sm hover:shadow-lg transition-shadow card-hover" data-category="ml visualization">
+                    <div class="relative h-48 overflow-hidden">
+                        <img src="https://images.unsplash.com/photo-1555949963-aa79dcee981c?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80" alt="InsightIQ" class="w-full h-full object-cover">
+                        <div class="absolute top-4 right-4">
+                            <span class="bg-black/50 backdrop-blur-sm text-white px-2 py-1 rounded-full text-xs font-medium">2025</span>
+                        </div>
+                    </div>
+                    <div class="p-6">
+                        <div class="flex items-center justify-between mb-3">
+                            <h3 class="text-xl font-bold text-white">InsightIQ — AI Document Intelligence (RAG)</h3>
+                            <div class="flex items-center text-gray-400 text-sm whitespace-nowrap">
+                                <i class="ri-time-line mr-1"></i>2 months
+                            </div>
+                        </div>
+                        <p class="text-gray-400 mb-4 leading-relaxed">
+                            Shipped InsightIQ, a local AI document assistant for instant Q&A on PDFs—Python, Streamlit, LangChain, FAISS, Ollama. Runs fully offline for privacy, returning fast answers and lifting analyst productivity without sending data to the cloud.
+                        </p>
+                        <div class="flex items-center justify-between mb-4">
+                            <div class="flex items-center space-x-2 text-green-400 font-semibold">
+                                <i class="ri-arrow-up-line"></i>
+                                <span>Zero-cost Inference</span>
+                            </div>
+                        </div>
+                        <div class="flex flex-wrap gap-2 mb-4">
+                            <span class="px-3 py-1 bg-gray-700 text-gray-300 rounded-full text-xs font-medium">Python</span>
+                            <span class="px-3 py-1 bg-gray-700 text-gray-300 rounded-full text-xs font-medium">LangChain</span>
+                            <span class="px-3 py-1 bg-gray-700 text-gray-300 rounded-full text-xs font-medium">FAISS</span>
+                            <span class="px-3 py-1 bg-gray-700 text-gray-300 rounded-full text-xs font-medium">HuggingFace</span>
+                        </div>
+                        <div class="flex gap-2">
+                            <a href="https://github.com/amankeskar" target="_blank" class="flex-1 bg-green-600 hover:bg-green-700 text-white font-semibold py-2 px-4 rounded-lg transition-colors text-center">
+                                <i class="ri-github-line mr-2"></i>GitHub
+                            </a>
+                            <button onclick="openProjectModal('insightiq')" class="flex-1 bg-dark-blue hover:bg-dark-blue text-white font-semibold py-2 px-4 rounded-lg transition-colors">
+                                <i class="ri-information-line mr-2"></i>Details
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Project 2 -->
+                <div class="project-card bg-gray-800 border border-gray-700 rounded-xl overflow-hidden shadow-sm hover:shadow-lg transition-shadow card-hover" data-category="analytics visualization">
+                    <div class="relative h-48 overflow-hidden">
+                        <img src="https://images.unsplash.com/photo-1554224155-6726b3ff858f?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80" alt="AutoAdvisor" class="w-full h-full object-cover">
+                        <div class="absolute top-4 right-4">
+                            <span class="bg-black/50 backdrop-blur-sm text-white px-2 py-1 rounded-full text-xs font-medium">2025</span>
+                        </div>
+                    </div>
+                    <div class="p-6">
+                        <div class="flex items-center justify-between mb-3">
+                            <h3 class="text-xl font-bold text-white">AutoAdvisor — Personal Finance Dashboard</h3>
+                            <div class="flex items-center text-gray-400 text-sm whitespace-nowrap">
+                                <i class="ri-time-line mr-1"></i>1 month
+                            </div>
+                        </div>
+                        <p class="text-gray-400 mb-4 leading-relaxed">
+                            Built AutoAdvisor, a Streamlit personal-finance tool that ingests CSVs, cleans, categorizes transactions, calculates KPIs, flags spending spikes, and visualizes trends—turning statements into actionable insight in seconds for budgeting now.
+                        </p>
+                        <div class="flex items-center justify-between mb-4">
+                            <div class="flex items-center space-x-2 text-green-400 font-semibold">
+                                <i class="ri-arrow-up-line"></i>
+                                <span>85% Less Manual Prep</span>
+                            </div>
+                        </div>
+                        <div class="flex flex-wrap gap-2 mb-4">
+                            <span class="px-3 py-1 bg-gray-700 text-gray-300 rounded-full text-xs font-medium">Python</span>
+                            <span class="px-3 py-1 bg-gray-700 text-gray-300 rounded-full text-xs font-medium">Streamlit</span>
+                            <span class="px-3 py-1 bg-gray-700 text-gray-300 rounded-full text-xs font-medium">pandas</span>
+                        </div>
+                        <div class="flex gap-2">
+                            <a href="https://autoadvisor-personal-finance-investment-dashboard-gvhjdcafs85b.streamlit.app/" target="_blank" class="flex-1 bg-green-600 hover:bg-green-700 text-white font-semibold py-2 px-4 rounded-lg transition-colors text-center">
+                                <i class="ri-external-link-line mr-2"></i>Live Demo
+                            </a>
+                            <button onclick="openProjectModal('autoadvisor')" class="flex-1 bg-dark-blue hover:bg-dark-blue text-white font-semibold py-2 px-4 rounded-lg transition-colors">
+                                <i class="ri-information-line mr-2"></i>Details
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Project 3 -->
+                <div class="project-card bg-gray-800 border border-gray-700 rounded-xl overflow-hidden shadow-sm hover:shadow-lg transition-shadow card-hover" data-category="ml visualization">
+                    <div class="relative h-48 overflow-hidden">
+                        <img src="https://images.unsplash.com/photo-1436491865332-7a61a109cc05?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80" alt="Flight Delay" class="w-full h-full object-cover">
+                        <div class="absolute top-4 right-4">
+                            <span class="bg-black/50 backdrop-blur-sm text-white px-2 py-1 rounded-full text-xs font-medium">2025</span>
+                        </div>
+                    </div>
+                    <div class="p-6">
+                        <div class="flex items-center justify-between mb-3">
+                            <h3 class="text-xl font-bold text-white">Flight Delay Prediction and Analysis</h3>
+                            <div class="flex items-center text-gray-400 text-sm whitespace-nowrap">
+                                <i class="ri-time-line mr-1"></i>2 months
+                            </div>
+                        </div>
+                        <p class="text-gray-400 mb-4 leading-relaxed">
+                            Built a flight-delay risk engine on 116K records fused with NOAA weather—87% accuracy (+10 pts vs. baseline), with 1.4% ingest errors. A Tableau dashboard with route-risk heat maps cut ad-hoc analysis turnaround by roughly 35%, with alerts.
+                        </p>
+                        <div class="flex items-center justify-between mb-4">
+                            <div class="flex items-center space-x-2 text-green-400 font-semibold">
+                                <i class="ri-arrow-up-line"></i>
+                                <span>87% Prediction Accuracy</span>
+                            </div>
+                        </div>
+                        <div class="flex flex-wrap gap-2 mb-4">
+                            <span class="px-3 py-1 bg-gray-700 text-gray-300 rounded-full text-xs font-medium">Python</span>
+                            <span class="px-3 py-1 bg-gray-700 text-gray-300 rounded-full text-xs font-medium">Tableau</span>
+                            <span class="px-3 py-1 bg-gray-700 text-gray-300 rounded-full text-xs font-medium">NOAA API</span>
+                        </div>
+                        <div class="flex gap-2">
+                            <a href="#" class="flex-1 bg-green-600 hover:bg-green-700 text-white font-semibold py-2 px-4 rounded-lg transition-colors text-center">
+                                <i class="ri-github-line mr-2"></i>GitHub
+                            </a>
+                            <button onclick="openProjectModal('flight-delay')" class="flex-1 bg-dark-blue hover:bg-dark-blue text-white font-semibold py-2 px-4 rounded-lg transition-colors">
+                                <i class="ri-information-line mr-2"></i>Details
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Project 4 -->
+                <div class="project-card bg-gray-800 border border-gray-700 rounded-xl overflow-hidden shadow-sm hover:shadow-lg transition-shadow card-hover" data-category="ml visualization">
+                    <div class="relative h-48 overflow-hidden">
+                        <img src="https://images.unsplash.com/photo-1473341304170-971dccb5ac1e?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80" alt="Energy Forecasting" class="w-full h-full object-cover">
+                        <div class="absolute top-4 right-4">
+                            <span class="bg-black/50 backdrop-blur-sm text-white px-2 py-1 rounded-full text-xs font-medium">2025</span>
+                        </div>
+                    </div>
+                    <div class="p-6">
+                        <div class="flex items-center justify-between mb-3">
+                            <h3 class="text-xl font-bold text-white">Energy Usage Forecasting</h3>
+                            <div class="flex items-center text-gray-400 text-sm whitespace-nowrap">
+                                <i class="ri-time-line mr-1"></i>2 months
+                            </div>
+                        </div>
+                        <p class="text-gray-400 mb-4 leading-relaxed">
+                            Forecasted residential energy demand from 2.5M smart-meter records (S3→SQL Server), hitting 91% accuracy via gradient boosting (+8-pt lift). Nightly ETL (<1% failures) and a Tableau planner projects ≈6% annual savings by peak-load shifting.
+                        </p>
+                        <div class="flex items-center justify-between mb-4">
+                            <div class="flex items-center space-x-2 text-green-400 font-semibold">
+                                <i class="ri-arrow-up-line"></i>
+                                <span>91% Forecast Accuracy</span>
+                            </div>
+                        </div>
+                        <div class="flex flex-wrap gap-2 mb-8">
+                            <span class="px-3 py-1 bg-gray-700 text-gray-300 rounded-full text-xs font-medium">Python</span>
+                            <span class="px-3 py-1 bg-gray-700 text-gray-300 rounded-full text-xs font-medium">R</span>
+                            <span class="px-3 py-1 bg-gray-700 text-gray-300 rounded-full text-xs font-medium">SQL Server</span>
+                            <span class="px-3 py-1 bg-gray-700 text-gray-300 rounded-full text-xs font-medium">AWS S3</span>
+                            <span class="px-3 py-1 bg-gray-700 text-gray-300 rounded-full text-xs font-medium">Tableau</span>
+                            <span class="px-3 py-1 bg-gray-700 text-gray-300 rounded-full text-xs font-medium">PowerShell</span>
+                        </div>
+                        <div class="flex gap-2">
+                            <a href="https://github.com/amankeskar" target="_blank" class="flex-1 bg-green-600 hover:bg-green-700 text-white font-semibold py-2 px-4 rounded-lg transition-colors text-center">
+                                <i class="ri-github-line mr-2"></i>GitHub
+                            </a>
+                            <button onclick="openProjectModal('energy-forecasting')" class="flex-1 bg-dark-blue hover:bg-dark-blue text-white font-semibold py-2 px-4 rounded-lg transition-colors">
+                                <i class="ri-information-line mr-2"></i>Details
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Project 5 -->
+                <div class="project-card bg-gray-800 border border-gray-700 rounded-xl overflow-hidden shadow-sm hover:shadow-lg transition-shadow card-hover" data-category="analytics visualization">
+                    <div class="relative h-48 overflow-hidden">
+                        <img src="https://images.unsplash.com/photo-1531415074968-036ba1b575da?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80" alt="Cricket Analytics" class="w-full h-full object-cover">
+                        <div class="absolute top-4 right-4">
+                            <span class="bg-black/50 backdrop-blur-sm text-white px-2 py-1 rounded-full text-xs font-medium">2024</span>
+                        </div>
+                    </div>
+                    <div class="p-6">
+                        <div class="flex items-center justify-between mb-3">
+                            <h3 class="text-xl font-bold text-white">Cricket World Cup Analytics Platform</h3>
+                            <div class="flex items-center text-gray-400 text-sm whitespace-nowrap">
+                                <i class="ri-time-line mr-1"></i>3 months
+                            </div>
+                        </div>
+                        <p class="text-gray-400 mb-4 leading-relaxed">
+                            Built a World Cup analytics platform with a 334-player, 40-KPI SQL Server backbone—sub-3s queries, 100% nightly freshness. Power Apps + Tableau frontend, plus a SQL/Python lineup simulator delivering +11% lift and 40% fewer ad-hoc requests.
+                        </p>
+                        <div class="flex items-center justify-between mb-4">
+                            <div class="flex items-center space-x-2 text-green-400 font-semibold">
+                                <i class="ri-arrow-up-line"></i>
+                                <span>+11% Win Probability</span>
+                            </div>
+                        </div>
+                        <div class="flex flex-wrap gap-2 mb-4">
+                            <span class="px-3 py-1 bg-gray-700 text-gray-300 rounded-full text-xs font-medium">SQL Server</span>
+                            <span class="px-3 py-1 bg-gray-700 text-gray-300 rounded-full text-xs font-medium">Python</span>
+                            <span class="px-3 py-1 bg-gray-700 text-gray-300 rounded-full text-xs font-medium">Tableau</span>
+                            <span class="px-3 py-1 bg-gray-700 text-gray-300 rounded-full text-xs font-medium">Power Apps</span>
+                        </div>
+                        <div class="flex gap-2">
+                            <a href="https://github.com/amankeskar" target="_blank" class="flex-1 bg-green-600 hover:bg-green-700 text-white font-semibold py-2 px-4 rounded-lg transition-colors text-center">
+                                <i class="ri-github-line mr-2"></i>GitHub
+                            </a>
+                            <button onclick="openProjectModal('cricket-analytics')" class="flex-1 bg-dark-blue hover:bg-dark-blue text-white font-semibold py-2 px-4 rounded-lg transition-colors">
+                                <i class="ri-information-line mr-2"></i>Details
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Project 6 -->
+                <div class="project-card bg-gray-800 border border-gray-700 rounded-xl overflow-hidden shadow-sm hover:shadow-lg transition-shadow card-hover" data-category="visualization analytics">
+                    <div class="relative h-48 overflow-hidden">
+                        <img src="https://images.unsplash.com/photo-1467232004584-a241de8bcf5d?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80" alt="Portfolio Website" class="w-full h-full object-cover">
+                        <div class="absolute top-4 right-4">
+                            <span class="bg-black/50 backdrop-blur-sm text-white px-2 py-1 rounded-full text-xs font-medium">2025</span>
+                        </div>
+                    </div>
+                    <div class="p-6">
+                        <div class="flex items-center justify-between mb-3">
+                            <h3 class="text-xl font-bold text-white">Interactive Data Analyst Portfolio</h3>
+                            <div class="flex items-center text-gray-400 text-sm whitespace-nowrap">
+                                <i class="ri-time-line mr-1"></i>1 month
+                            </div>
+                        </div>
+                        <p class="text-gray-400 mb-4 leading-relaxed">
+                            Built an interactive data analyst portfolio: an SPA with Tailwind, Chart.js radar skills, multi-category project filters, modal details, and smooth micro-interactions—SEO & accessibility tuned to showcase projects & speed recruiter review.
+                        </p>
+                        <div class="flex items-center justify-between mb-4">
+                            <div class="flex items-center space-x-2 text-green-400 font-semibold">
+                                <i class="ri-arrow-up-line"></i>
+                                <span>100% Mobile Responsive</span>
+                            </div>
+                        </div>
+                        <div class="flex flex-wrap gap-2 mb-4">
+                            <span class="px-3 py-1 bg-gray-700 text-gray-300 rounded-full text-xs font-medium">HTML5</span>
+                            <span class="px-3 py-1 bg-gray-700 text-gray-300 rounded-full text-xs font-medium">Tailwind CSS</span>
+                            <span class="px-3 py-1 bg-gray-700 text-gray-300 rounded-full text-xs font-medium">JavaScript</span>
+                            <span class="px-3 py-1 bg-gray-700 text-gray-300 rounded-full text-xs font-medium">Chart.js</span>
+                        </div>
+                        <div class="flex gap-2">
+                            <a href="https://github.com/amankeskar" target="_blank" class="flex-1 bg-green-600 hover:bg-green-700 text-white font-semibold py-2 px-4 rounded-lg transition-colors text-center">
+                                <i class="ri-github-line mr-2"></i>GitHub
+                            </a>
+                            <button onclick="openProjectModal('portfolio-website')" class="flex-1 bg-dark-blue hover:bg-dark-blue text-white font-semibold py-2 px-4 rounded-lg transition-colors">
+                                <i class="ri-information-line mr-2"></i>Details
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Experience Section -->
+    <section id="experience" class="py-20 bg-gray-900">
+        <div class="max-w-7xl mx-auto px-6">
+            <div class="text-center mb-16">
+                <div class="flex items-center justify-center mb-4">
+                    <div class="w-12 h-12 bg-indigo-100 rounded-lg flex items-center justify-center mr-3">
+                        <i class="ri-briefcase-line text-indigo-600 text-2xl"></i>
+                    </div>
+                    <h2 class="text-4xl font-bold text-white">Professional Experience</h2>
+                </div>
+                <p class="text-gray-400 text-lg max-w-2xl mx-auto">
+                    My professional journey in data analytics and business intelligence
+                </p>
+            </div>
+
+            <!-- Professional Experience - TCS Only -->
+            <div class="max-w-4xl mx-auto">
+                <div class="bg-gray-800 border border-gray-700 rounded-xl p-8 shadow-sm">
+                    <div class="flex items-center mb-6">
+                        <div class="w-16 h-16 bg-blue-100 rounded-xl flex items-center justify-center mr-4">
+                            <i class="ri-building-line text-blue-600 text-2xl"></i>
+                        </div>
+                        <div class="flex-1">
+                            <h3 class="text-2xl font-bold text-white">Data Analyst</h3>
+                            <p class="text-blue-400 font-semibold text-lg">Tata Consultancy Services (TCS)</p>
+                            <p class="text-gray-400">Pune, India</p>
+                        </div>
+                        <div class="text-right">
+                            <div class="text-sm text-gray-300 mb-1">
+                                <i class="ri-calendar-line mr-1"></i>Jul 2022 - Jul 2023
+                            </div>
+                            <span class="bg-green-100 text-green-800 px-3 py-1 rounded-full text-sm font-medium">1 year</span>
+                        </div>
+                    </div>
+                    
+                    <div class="grid md:grid-cols-2 gap-6 mb-6">
+                        <div>
+                            <h4 class="text-lg font-semibold text-white mb-3">Key Achievements</h4>
+                            <ul class="text-gray-400 text-sm space-y-2">
+                                <li>• Designed governed Power BI semantic model (star schema, DAX, RLS) cutting query time from 14s to 2s</li>
+                                <li>• Established certified datasets enabling 5 departments to build 30+ self-serve reports, reducing ad-hoc requests by 60%</li>
+                            </ul>
+                        </div>
+                        <div>
+                            <h4 class="text-lg font-semibold text-white mb-3">Impact & Results</h4>
+                            <ul class="text-gray-400 text-sm space-y-2">
+                                <li>• Investigated anomalies with advanced T-SQL to surface $1.2M revenue leakage and implement recovery</li>
+                                <li>• Codified KPI definitions and data contracts, reducing refresh incidents by 70%</li>
+                            </ul>
+                        </div>
+                    </div>
+                    
+                    <div>
+                        <h4 class="text-lg font-semibold text-white mb-3">Technologies Used</h4>
+                        <div class="flex flex-wrap gap-2">
+                            <span class="px-3 py-1 bg-gray-700 text-gray-300 rounded-full text-sm font-medium">Power BI</span>
+                            <span class="px-3 py-1 bg-gray-700 text-gray-300 rounded-full text-sm font-medium">DAX</span>
+                            <span class="px-3 py-1 bg-gray-700 text-gray-300 rounded-full text-sm font-medium">T-SQL</span>
+                            <span class="px-3 py-1 bg-gray-700 text-gray-300 rounded-full text-sm font-medium">RLS</span>
+                            <span class="px-3 py-1 bg-gray-700 text-gray-300 rounded-full text-sm font-medium">Data Modeling</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Education Section -->
+    <section class="py-20 bg-gray-900">
+        <div class="max-w-7xl mx-auto px-6">
+            <div class="text-center mb-16">
+                <div class="flex items-center justify-center mb-4">
+                    <div class="w-12 h-12 bg-green-100 rounded-lg flex items-center justify-center mr-3">
+                        <i class="ri-graduation-cap-line text-green-600 text-2xl"></i>
+                    </div>
+                    <h2 class="text-4xl font-bold text-white">Education</h2>
+                </div>
+                <p class="text-gray-400 text-lg max-w-2xl mx-auto">
+                    Academic foundation in data science and computer engineering
+                </p>
+            </div>
+
+            <div class="grid md:grid-cols-2 gap-8 max-w-6xl mx-auto">
+                <!-- Masters Degree -->
+                <div class="bg-gray-800 border border-gray-700 rounded-xl p-6 shadow-sm">
+                    <div class="flex items-center mb-4">
+                        <div class="w-12 h-12 bg-green-100 rounded-lg flex items-center justify-center mr-3">
+                            <i class="ri-graduation-cap-line text-green-600 text-xl"></i>
+                        </div>
+                        <div>
+                            <h3 class="text-xl font-bold text-white">MS Information Systems</h3>
+                            <p class="text-green-400 font-medium">Syracuse University</p>
+                        </div>
+                    </div>
+                    <div class="mb-4">
+                        <p class="text-gray-300 text-sm mb-2">
+                            <i class="ri-calendar-line mr-1"></i>Aug 2023 - May 2025 • <span class="font-semibold">GPA: 3.67/4.0</span>
+                        </p>
+                        <p class="text-blue-400 text-sm font-medium">Certificate of Advanced Studies in Data Science</p>
+                    </div>
+                    <ul class="text-gray-400 text-sm space-y-1 mb-4">
+                        <li>• Specialized in data science, machine learning, and business intelligence</li>
+                        <li>• Advanced coursework in statistical modeling, data mining, and predictive analytics</li>
+                        <li>• Capstone projects in RAG systems, financial analytics, and ML prediction models</li>
+                    </ul>
+                    <div class="flex flex-wrap gap-1">
+                        <span class="px-2 py-1 bg-gray-600 text-gray-300 rounded text-xs">Data Science</span>
+                        <span class="px-2 py-1 bg-gray-600 text-gray-300 rounded text-xs">Machine Learning</span>
+                        <span class="px-2 py-1 bg-gray-600 text-gray-300 rounded text-xs">Analytics</span>
+                    </div>
+                </div>
+
+                <!-- Bachelors Degree -->
+                <div class="bg-gray-800 border border-gray-700 rounded-xl p-6 shadow-sm">
+                    <div class="flex items-center mb-4">
+                        <div class="w-12 h-12 bg-green-100 rounded-lg flex items-center justify-center mr-3">
+                            <i class="ri-graduation-cap-line text-green-600 text-xl"></i>
+                        </div>
+                        <div>
+                            <h3 class="text-xl font-bold text-white">BE Computer Engineering</h3>
+                            <p class="text-green-400 font-medium">Savitribai Phule Pune University</p>
+                        </div>
+                    </div>
+                    <div class="mb-4">
+                        <p class="text-gray-300 text-sm mb-2">
+                            <i class="ri-calendar-line mr-1"></i>Aug 2018 - Jun 2022 • <span class="font-semibold">GPA: 3.64/4.0</span>
+                        </p>
+                        <p class="text-gray-400 text-sm">Pune, India</p>
+                    </div>
+                    <ul class="text-gray-400 text-sm space-y-1 mb-4">
+                        <li>• Strong foundation in computer science, algorithms, and software engineering</li>
+                        <li>• Coursework in data structures, database systems, and statistical methods</li>
+                        <li>• Projects in web development, data analysis, and machine learning applications</li>
+                    </ul>
+                    <div class="flex flex-wrap gap-1">
+                        <span class="px-2 py-1 bg-gray-600 text-gray-300 rounded text-xs">Computer Engineering</span>
+                        <span class="px-2 py-1 bg-gray-600 text-gray-300 rounded text-xs">Software Development</span>
+                        <span class="px-2 py-1 bg-gray-600 text-gray-300 rounded text-xs">Data Structures</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="py-20 bg-gray-900">
+        <div class="max-w-7xl mx-auto px-6">
+            <div class="text-center mb-16">
+                <div class="flex items-center justify-center mb-4">
+                    <div class="w-12 h-12 bg-blue-100 rounded-lg flex items-center justify-center mr-3">
+                        <i class="ri-mail-line text-blue-600 text-2xl"></i>
+                    </div>
+                    <h2 class="text-4xl font-bold text-white">Get In Touch</h2>
+                </div>
+            </div>
+
+            <div class="flex justify-center">
+                <!-- Contact Information -->
+                <div class="max-w-md w-full">
+                    <div class="bg-gray-700 border border-gray-600 rounded-xl p-8">
+                        <h3 class="text-2xl font-bold text-white mb-6 text-center">Contact Information</h3>
+                        
+                        <div class="space-y-6">
+                            <div class="flex items-center">
+                                <div class="w-12 h-12 bg-blue-100 rounded-lg flex items-center justify-center mr-4">
+                                    <i class="ri-mail-line text-blue-600 text-xl"></i>
+                                </div>
+                                <div>
+                                    <p class="text-sm text-gray-400">Email</p>
+                                    <a href="mailto:aakeskar@syr.edu" class="text-white font-medium hover:text-blue-400 transition-colors">aakeskar@syr.edu</a>
+                                </div>
+                            </div>
+
+                            <div class="flex items-center">
+                                <div class="w-12 h-12 bg-blue-100 rounded-lg flex items-center justify-center mr-4">
+                                    <i class="ri-phone-line text-blue-600 text-xl"></i>
+                                </div>
+                                <div>
+                                    <p class="text-sm text-gray-400">Phone</p>
+                                    <a href="tel:+16802167813" class="text-white font-medium hover:text-blue-400 transition-colors">+1 (680) 216-7813</a>
+                                </div>
+                            </div>
+
+                            <div class="flex items-center">
+                                <div class="w-12 h-12 bg-blue-100 rounded-lg flex items-center justify-center mr-4">
+                                    <i class="ri-linkedin-line text-blue-600 text-xl"></i>
+                                </div>
+                                <div>
+                                    <p class="text-sm text-gray-400">LinkedIn</p>
+                                    <a href="https://linkedin.com/in/aman-keskar" class="text-white font-medium hover:text-blue-400 transition-colors">linkedin.com/in/aman-keskar</a>
+                                </div>
+                            </div>
+
+                            <div class="flex items-center">
+                                <div class="w-12 h-12 bg-blue-100 rounded-lg flex items-center justify-center mr-4">
+                                    <i class="ri-github-line text-blue-600 text-xl"></i>
+                                </div>
+                                <div>
+                                    <p class="text-sm text-gray-400">GitHub</p>
+                                    <a href="https://github.com/amankeskar" class="text-white font-medium hover:text-blue-400 transition-colors">github.com/amankeskar</a>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="mt-8 pt-6 border-t border-gray-600">
+                            <div class="flex items-center text-green-400 text-sm">
+                                <div class="w-2 h-2 bg-green-500 rounded-full mr-2"></div>
+                                <span>Available for new opportunities</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <script>
+        // Mobile menu toggle
+        document.getElementById('mobile-menu-btn').addEventListener('click', function() {
+            const mobileMenu = document.getElementById('mobile-menu');
+            mobileMenu.classList.toggle('active');
+        });
+
+        // Performance Analytics Chart
+        document.addEventListener('DOMContentLoaded', function() {
+            const ctx = document.getElementById('performanceChart');
+            if (ctx) {
+                const performanceChart = new Chart(ctx.getContext('2d'), {
+                    type: 'radar',
+                    data: {
+                        labels: ['Data Analysis', 'Machine Learning', 'Business Intelligence', 'Database Management', 'Visualization', 'Statistical Modeling'],
+                        datasets: [{
+                            label: 'Skills Proficiency (%)',
+                            data: [95, 88, 92, 90, 94, 85],
+                            backgroundColor: 'rgba(20, 24, 87, 0.3)',
+                            borderColor: '#2d3578',
+                            borderWidth: 2,
+                            pointBackgroundColor: '#2d3578',
+                            pointBorderColor: '#141857',
+                            pointBorderWidth: 2,
+                            pointRadius: 5,
+                            pointHoverRadius: 7
+                        }]
+                    },
+                    options: {
+                        responsive: true,
+                        maintainAspectRatio: false,
+                        plugins: {
+                            legend: {
+                                display: true,
+                                position: 'top',
+                                labels: {
+                                    color: '#9CA3AF',
+                                    font: {
+                                        size: 14,
+                                        family: 'Inter, system-ui, sans-serif'
+                                    },
+                                    usePointStyle: false,
+                                    padding: 20
+                                }
+                            },
+                            title: {
+                                display: true,
+                                text: 'Technical Skills Radar',
+                                color: '#F3F4F6',
+                                font: {
+                                    size: 16,
+                                    weight: 'bold',
+                                    family: 'Inter, system-ui, sans-serif'
+                                },
+                                padding: {
+                                    bottom: 20
+                                }
+                            }
+                        },
+                        scales: {
+                            r: {
+                                angleLines: {
+                                    color: 'rgba(156, 163, 175, 0.3)'
+                                },
+                                grid: {
+                                    color: 'rgba(156, 163, 175, 0.3)'
+                                },
+                                pointLabels: {
+                                    color: '#9CA3AF',
+                                    font: {
+                                        size: 12,
+                                        family: 'Inter, system-ui, sans-serif'
+                                    }
+                                },
+                                ticks: {
+                                    color: '#9CA3AF',
+                                    backdropColor: 'transparent',
+                                    beginAtZero: true,
+                                    max: 100,
+                                    stepSize: 20,
+                                    font: {
+                                        size: 11,
+                                        family: 'Inter, system-ui, sans-serif'
+                                    }
+                                }
+                            }
+                        },
+                        elements: {
+                            point: {
+                                hoverBackgroundColor: '#1a1f6b'
+                            }
+                        }
+                    }
+                });
+            }
+        });
+
+        // Smooth scrolling for navigation links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'start'
+                    });
+                    // Close mobile menu if open
+                    document.getElementById('mobile-menu').classList.remove('active');
+                }
+            });
+        });
+
+        // Animate skill bars on scroll
+        const skillBars = document.querySelectorAll('.skill-bar');
+        const animateSkillBars = () => {
+            skillBars.forEach(bar => {
+                const rect = bar.getBoundingClientRect();
+                if (rect.top < window.innerHeight - 100) {
+                    const width = bar.getAttribute('data-width');
+                    bar.style.width = width + '%';
+                }
+            });
+        };
+
+        window.addEventListener('scroll', animateSkillBars);
+        window.addEventListener('load', animateSkillBars);
+
+        // Project filtering
+        const filterButtons = document.querySelectorAll('[data-filter]');
+        const projectCards = document.querySelectorAll('.project-card');
+
+        filterButtons.forEach(button => {
+            button.addEventListener('click', () => {
+                const filterValue = button.getAttribute('data-filter');
+                
+                // Update active filter button with proper styling
+                filterButtons.forEach(btn => {
+                    btn.classList.remove('bg-dark-blue', 'text-white');
+                    btn.classList.add('bg-gray-800', 'text-gray-400');
+                });
+                button.classList.remove('bg-gray-800', 'text-gray-400');
+                button.classList.add('bg-dark-blue', 'text-white');
+                
+                // Filter project cards with smooth animation
+                projectCards.forEach(card => {
+                    const cardCategories = card.getAttribute('data-category').split(' ');
+                    const shouldShow = filterValue === 'all' || cardCategories.includes(filterValue);
+                    
+                    if (shouldShow) {
+                        card.style.display = 'block';
+                        card.style.opacity = '0';
+                        card.style.transform = 'translateY(20px)';
+                        setTimeout(() => {
+                            card.style.opacity = '1';
+                            card.style.transform = 'translateY(0)';
+                            card.style.transition = 'all 0.3s ease-in-out';
+                        }, 50);
+                    } else {
+                        card.style.transition = 'all 0.3s ease-in-out';
+                        card.style.opacity = '0';
+                        card.style.transform = 'translateY(-20px)';
+                        setTimeout(() => {
+                            card.style.display = 'none';
+                        }, 300);
+                    }
+                });
+            });
+        });
+
+        // Add some interactive hover effects
+        document.querySelectorAll('.card-hover').forEach(card => {
+            card.addEventListener('mouseenter', function() {
+                this.style.transform = 'translateY(-5px)';
+            });
+            
+            card.addEventListener('mouseleave', function() {
+                this.style.transform = 'translateY(0)';
+            });
+        });
+
+        // Project Details Modal
+        function openProjectModal(projectId) {
+            const modal = document.getElementById('projectModal');
+            const modalContent = document.getElementById('modalContent');
+            
+            // Project details data
+            const projectDetails = {
+                'insightiq': {
+                    title: 'InsightIQ — AI-Powered Document Q&A Assistant',
+                    description: 'Architected end-to-end local RAG system for enterprise PDFs with token-aware semantic chunking, FAISS indexing, and traceable citations for grounded answers.',
+                    fullDescription: `
+                        <h4 class="text-lg font-bold text-white mb-3">Project Overview</h4>
+                        <p class="text-gray-400 mb-4">InsightIQ is a locally hosted AI assistant that allows users to upload PDFs and instantly ask natural-language questions about their content, without sending data to external servers — making it secure, fast, and privacy-compliant.</p>
+                        
+                        <h4 class="text-lg font-bold text-white mb-3">What I Built</h4>
+                        <ul class="text-gray-400 mb-4 space-y-2">
+                            <li>• <strong>Automated Document Processing Pipeline:</strong> Implemented PDF ingestion with PyMuPDF, text chunking, and vectorization using HuggingFace sentence transformers, enabling semantic search and contextual retrieval</li>
+                            <li>• <strong>Efficient Knowledge Base Search:</strong> Integrated FAISS vector store for fast, scalable document search, reducing query latency to milliseconds even on multi-document collections</li>
+                            <li>• <strong>Local AI Model Integration:</strong> Leveraged Ollama to run open-source LLMs (Mistral, TinyLlama, Gemma) locally, removing dependency on paid APIs and ensuring offline functionality</li>
+                            <li>• <strong>Interactive User Interface:</strong> Designed a responsive Streamlit app with file uploader, toast notifications, sidebar chat history, and ChatGPT-style input interface</li>
+                            <li>• <strong>Model Flexibility:</strong> Enabled one-click switching between models for speed vs. accuracy trade-offs, allowing users to optimize performance on-demand</li>
+                        </ul>
+                        
+                        <h4 class="text-lg font-bold text-white mb-3">Impact & Value</h4>
+                        <ul class="text-gray-400 mb-4 space-y-2">
+                            <li>• <strong>Data Privacy First:</strong> No external API calls; suitable for industries with strict compliance (finance, healthcare, legal)</li>
+                            <li>• <strong>Productivity Boost:</strong> Cuts document search & summarization time from hours to seconds, making it a powerful internal knowledge assistant</li>
+                            <li>• <strong>Scalable & Extendable:</strong> Modular codebase allows easy integration with additional file formats, advanced analytics, or cloud hosting</li>
+                        </ul>
+                    `,
+                    tech: ['Python', 'Streamlit', 'LangChain', 'FAISS', 'HuggingFace', 'Ollama', 'PyMuPDF'],
+                    github: 'https://github.com/amankeskar/InsightIQ',
+                    demo: null
+                },
+                'autoadvisor': {
+                    title: 'AutoAdvisor — Automated Personal Finance & Investment Planner',
+                    description: 'Data-driven personal finance and investment planning application that automates the ingestion, cleaning, and analysis of financial transactions and investment data.',
+                    fullDescription: `
+                        <h4 class="text-lg font-bold text-white mb-3">Project Overview</h4>
+                        <p class="text-gray-400 mb-4">AutoAdvisor is a data-driven personal finance and investment planning application that automates the ingestion, cleaning, and analysis of financial transactions and investment data, presenting insights through an interactive Streamlit dashboard. It transforms raw financial statements into clear, actionable insights, helping users track spending, monitor investments, and improve savings habits.</p>
+                        
+                        <h4 class="text-lg font-bold text-white mb-3">What I Built</h4>
+                        <h5 class="text-md font-semibold text-blue-400 mb-2">End-to-End Data Pipeline:</h5>
+                        <ul class="text-gray-400 mb-4 space-y-1 ml-4">
+                            <li>• Built a robust ETL process to ingest raw CSV transaction and investment data</li>
+                            <li>• Developed a flexible CSV parser capable of handling missing headers and inconsistent formatting</li>
+                            <li>• Automated data cleaning (date parsing, type casting, category assignment, spike detection) to ensure consistent and reliable analysis</li>
+                        </ul>
+                        
+                        <h5 class="text-md font-semibold text-blue-400 mb-2">Analytics & Insights Engine:</h5>
+                        <ul class="text-gray-400 mb-4 space-y-1 ml-4">
+                            <li>• Designed a metrics computation module to calculate monthly KPIs: total income, total expenses, net savings, savings rate, category breakdown, and unusual spending patterns</li>
+                            <li>• Implemented spending spike detection and top-category analysis to highlight key budget drivers</li>
+                            <li>• Created rule-based financial health insights based on industry benchmarks (e.g., 20% savings rule)</li>
+                        </ul>
+                        
+                        <h5 class="text-md font-semibold text-blue-400 mb-2">Interactive Visualization Dashboard:</h5>
+                        <ul class="text-gray-400 mb-4 space-y-1 ml-4">
+                            <li>• Developed a Streamlit interface displaying KPI cards, category breakdown charts, monthly trend visualizations, and searchable transaction tables</li>
+                            <li>• Added CSV upload functionality for users to analyze their own financial data</li>
+                            <li>• Included downloadable monthly reports for offline review</li>
+                        </ul>
+                        
+                        <h5 class="text-md font-semibold text-blue-400 mb-2">Mock Data Simulation:</h5>
+                        <ul class="text-gray-400 mb-4 space-y-1 ml-4">
+                            <li>• Generated 20 months of realistic synthetic financial data to demonstrate app capabilities, including varied incomes, expenses, and spending outliers</li>
+                        </ul>
+                        
+                        <h4 class="text-lg font-bold text-white mb-3">Impact & Value</h4>
+                        <ul class="text-gray-400 space-y-2">
+                            <li>• <strong>Streamlines financial tracking:</strong> Converts raw transaction data into meaningful, visual insights within seconds</li>
+                            <li>• <strong>Improves decision-making:</strong> Identifies top spending areas and unusual transactions to support better budgeting</li>
+                            <li>• <strong>Saves analysis time:</strong> Eliminates manual spreadsheet work with automated categorization and reporting</li>
+                            <li>• <strong>Portfolio-ready:</strong> Demonstrates skills in data engineering, analytics, and dashboard deployment for real-world business use cases</li>
+                        </ul>
+                    `,
+                    tech: ['Python', 'Streamlit', 'Pandas', 'PyArrow', 'YAML', 'GitHub Actions'],
+                    github: null,
+                    demo: 'https://autoadvisor-personal-finance-investment-dashboard-gvhjdcafs85b.streamlit.app/'
+                },
+                'flight-delay': {
+                    title: 'Flight Delay Prediction and Analysis',
+                    description: 'Machine learning system that forecasts departure delay likelihood by combining historical flight operations with NOAA weather data.',
+                    fullDescription: `
+                        <h4 class="text-lg font-bold text-white mb-3">Project Overview</h4>
+                        <p class="text-gray-400 mb-4">Flight Delay Prediction and Analysis forecasts the likelihood of departure delays by combining historical flight operations with NOAA weather. The goal was to give planners and analysts an at-a-glance risk view by route, carrier, and time of day—and a defensible model behind it.</p>
+                        
+                        <h4 class="text-lg font-bold text-white mb-3">What I Built</h4>
+                        <h5 class="text-md font-semibold text-blue-400 mb-2">Data Ingestion & Quality:</h5>
+                        <ul class="text-gray-400 mb-4 space-y-1 ml-4">
+                            <li>• Orchestrated an end-to-end Python pipeline that pulled 116K flight records and matched them with NOAA weather via REST</li>
+                            <li>• Added row-level validations (type checks, null/range guards, referential integrity) and schema checks</li>
+                            <li>• Kept ingest errors capped at 1.4% through comprehensive data quality controls</li>
+                        </ul>
+                        
+                        <h5 class="text-md font-semibold text-blue-400 mb-2">Feature Engineering:</h5>
+                        <ul class="text-gray-400 mb-4 space-y-1 ml-4">
+                            <li>• Created predictive signals including weather categories (visibility bands, precip flags)</li>
+                            <li>• Built day-of-week and seasonal indicators, and carrier load proxy variables</li>
+                            <li>• Engineered time-based and contextual features to capture delay patterns</li>
+                        </ul>
+                        
+                        <h5 class="text-md font-semibold text-blue-400 mb-2">Machine Learning Model:</h5>
+                        <ul class="text-gray-400 mb-4 space-y-1 ml-4">
+                            <li>• Trained a gradient-boosting classifier achieving 87% accuracy</li>
+                            <li>• Achieved +10-point lift over simple rule-based baseline</li>
+                            <li>• Used stratified splits and validated that weather + schedule dynamics drive risk</li>
+                        </ul>
+                        
+                        <h5 class="text-md font-semibold text-blue-400 mb-2">Decision Dashboard:</h5>
+                        <ul class="text-gray-400 mb-4 space-y-1 ml-4">
+                            <li>• Published a Tableau dashboard with route-risk heat maps and delay timelines</li>
+                            <li>• Added carrier/airport filters for route–destination analysis</li>
+                            <li>• Enabled slicing by origin–destination, hour, and weather scenario</li>
+                        </ul>
+                        
+                        <h4 class="text-lg font-bold text-white mb-3">Technical Flow</h4>
+                        <p class="text-gray-400 mb-4"><strong>Extract & validate</strong> flight and weather data → <strong>Transform & join</strong> to route–hour grain → <strong>Engineer features & train</strong> gradient boosting → <strong>Score & publish</strong> outputs to Tableau for exploration</p>
+                        
+                        <h4 class="text-lg font-bold text-white mb-3">Impact & Results</h4>
+                        <ul class="text-gray-400 space-y-2">
+                            <li>• <strong>35% faster analysis:</strong> Centralized data eliminated spreadsheet wrangling for ad-hoc analysis</li>
+                            <li>• <strong>Proactive operations:</strong> Clear risk callouts supported earlier buffer decisions and improved stakeholder updates</li>
+                            <li>• <strong>Operational insights:</strong> Feature importance informed practical playbooks with weather-driven contingency thresholds</li>
+                        </ul>
+                    `,
+                    tech: ['Python', 'Pandas', 'Scikit-learn', 'NOAA API', 'Tableau', 'REST APIs'],
+                    github: null,
+                    demo: null
+                },
+                'energy-forecasting': {
+                    title: 'Energy Usage Forecasting Platform',
+                    description: 'Predicts short-term electricity demand for residential smart meters to help operations teams plan load shifts and reduce peak costs.',
+                    fullDescription: `
+                        <h4 class="text-lg font-bold text-white mb-3">Project Overview</h4>
+                        <p class="text-gray-400 mb-4">Energy Usage Forecasting predicts short-term electricity demand for residential smart meters to help operations teams plan load shifts and reduce peak costs. The project combines large-scale meter telemetry with calendar and behavioral signals, then packages the forecasts in an actionable Tableau view.</p>
+                        
+                        <h4 class="text-lg font-bold text-white mb-3">What I Built</h4>
+                        <h5 class="text-md font-semibold text-blue-400 mb-2">Nightly ETL & Quality Controls:</h5>
+                        <ul class="text-gray-400 mb-4 space-y-1 ml-4">
+                            <li>• Automated a Python + PowerShell pipeline ingesting 2.5M smart-meter records from AWS S3 into SQL Server</li>
+                            <li>• Added schema checks, type/range validation, and retry logic</li>
+                            <li>• Maintained load failures under 1% through robust error handling</li>
+                        </ul>
+                        
+                        <h5 class="text-md font-semibold text-blue-400 mb-2">EDA & Feature Engineering:</h5>
+                        <ul class="text-gray-400 mb-4 space-y-1 ml-4">
+                            <li>• Created signals like time-of-use bands, holiday/seasonal flags</li>
+                            <li>• Built temperature/weekday interactions and occupancy proxies (night/day stability)</li>
+                            <li>• Achieved +8 point model performance lift through strategic feature engineering</li>
+                        </ul>
+                        
+                        <h5 class="text-md font-semibold text-blue-400 mb-2">Modeling & Validation:</h5>
+                        <ul class="text-gray-400 mb-4 space-y-1 ml-4">
+                            <li>• Trained and cross-validated gradient-boosting models to 91% forecast accuracy</li>
+                            <li>• Implemented careful holdout and rolling-window checks for temporal leakage</li>
+                            <li>• Validated model stability across different time periods and meter segments</li>
+                        </ul>
+                        
+                        <h5 class="text-md font-semibold text-blue-400 mb-2">Insights & Decision Support:</h5>
+                        <ul class="text-gray-400 mb-4 space-y-1 ml-4">
+                            <li>• Built Tableau dashboard with neighborhood/device segments and peak windows</li>
+                            <li>• Added "what-if" load-shift scenarios to inform operations</li>
+                            <li>• Created actionable views for daily planning and exception handling</li>
+                        </ul>
+                        
+                        <h4 class="text-lg font-bold text-white mb-3">Technical Flow</h4>
+                        <p class="text-gray-400 mb-4"><strong>Ingest & validate</strong> (S3 → SQL Server) → <strong>Explore & engineer</strong> features (calendar, behavioral, interactions) → <strong>Train & cross-validate</strong> gradient boosting → <strong>Publish forecasts</strong> and scenario views to Tableau</p>
+                        
+                        <h4 class="text-lg font-bold text-white mb-3">Impact & Results</h4>
+                        <ul class="text-gray-400 space-y-2">
+                            <li>• <strong>Reliability:</strong> <1% ingestion failures ensured consistent nightly refreshes for stakeholders</li>
+                            <li>• <strong>Accuracy:</strong> 91% forecasting accuracy enabled confident peak planning and exception handling</li>
+                            <li>• <strong>Cost savings:</strong> Recommended load-shift actions projected to reduce annual energy spend by ~6%</li>
+                            <li>• <strong>Analyst productivity:</strong> Centralized views eliminated spreadsheet wrangling and standardized daily planning</li>
+                        </ul>
+                    `,
+                    tech: ['Python', 'R', 'SQL Server', 'AWS S3', 'Tableau', 'PowerShell'],
+                    github: null,
+                    demo: null
+                },
+                'cricket-analytics': {
+                    title: 'Cricket World Cup Analytics Platform',
+                    description: 'Comprehensive analytics platform delivering fast, self-serve insights for cricket coaches and analysts with 334 players, 40 KPIs, and lineup optimization.',
+                    fullDescription: `
+                        <h4 class="text-lg font-bold text-white mb-3">Project Overview</h4>
+                        <p class="text-gray-400 mb-4">Cricket World Cup Analytics Platform delivers fast, self-serve insights for coaches and analysts by centralizing player and match data, standardizing KPIs, and surfacing situational performance views (opponent, venue, phase of play). The goal: enable data-driven selection and tactics without waiting on ad-hoc requests.</p>
+                        
+                        <h4 class="text-lg font-bold text-white mb-3">What I Built</h4>
+                        <h5 class="text-md font-semibold text-blue-400 mb-2">Performance Database & Fast Queries:</h5>
+                        <ul class="text-gray-400 mb-4 space-y-1 ml-4">
+                            <li>• Designed a SQL Server schema for 334 players and 40 KPIs</li>
+                            <li>• Built tuned stored procedures and indexed views that return match-level stats in <3 seconds</li>
+                            <li>• Optimized query performance for real-time analytics during matches</li>
+                        </ul>
+                        
+                        <h5 class="text-md font-semibold text-blue-400 mb-2">Reliable Nightly ETL:</h5>
+                        <ul class="text-gray-400 mb-4 space-y-1 ml-4">
+                            <li>• Automated PowerShell + SQL Server Agent jobs for ingest and validation</li>
+                            <li>• Implemented schema/type/range checks and KPI refresh processes</li>
+                            <li>• Delivered 100% data freshness each morning for coaching staff</li>
+                        </ul>
+                        
+                        <h5 class="text-md font-semibold text-blue-400 mb-2">Interactive Analytics UI:</h5>
+                        <ul class="text-gray-400 mb-4 space-y-1 ml-4">
+                            <li>• Published Tableau dashboards (form, matchups, phase/over views)</li>
+                            <li>• Wrapped dashboards in Power Apps front end for mobile-friendly access</li>
+                            <li>• Added venue/opponent filters for situational analysis</li>
+                        </ul>
+                        
+                        <h5 class="text-md font-semibold text-blue-400 mb-2">Lineup Optimization:</h5>
+                        <ul class="text-gray-400 mb-4 space-y-1 ml-4">
+                            <li>• Built SQL + Python lineup model that simulates match scenarios</li>
+                            <li>• Boosted win probability by 11% in controlled simulations</li>
+                            <li>• Documented usage in concise guide and ran training sessions</li>
+                        </ul>
+                        
+                        <h4 class="text-lg font-bold text-white mb-3">Technical Flow</h4>
+                        <p class="text-gray-400 mb-4"><strong>Ingest & validate</strong> raw match feeds nightly → <strong>Compute KPIs</strong> and cache aggregates via stored procedures → <strong>Serve dashboards</strong> in Tableau, embedded in Power Apps → <strong>Run simulations</strong> in SQL/Python to compare lineups and matchups</p>
+                        
+                        <h4 class="text-lg font-bold text-white mb-3">Impact & Results</h4>
+                        <ul class="text-gray-400 space-y-2">
+                            <li>• <strong>Speed:</strong> Sub-3s stats queries enabled real-time selection debates and on-the-fly scenario checks</li>
+                            <li>• <strong>Freshness:</strong> 100% daily refresh built trust—no stale numbers in meetings</li>
+                            <li>• <strong>Better decisions:</strong> +11% simulated win probability informed lineup and matchup choices</li>
+                            <li>• <strong>Productivity:</strong> User guide + training cut ad-hoc analyst requests by 40%, freeing time for deeper analysis</li>
+                        </ul>
+                        
+                        <h4 class="text-lg font-bold text-white mb-3">Future Improvements</h4>
+                        <ul class="text-gray-400 space-y-1">
+                            <li>• Add player availability/fitness constraints and weather-adjusted pitch factors to lineup simulator</li>
+                            <li>• Introduce role-based access and audit trails in Power Apps for staff-level permissions</li>
+                            <li>• Implement A/B tracking of lineup recommendations vs. outcomes to close the loop on model ROI</li>
+                        </ul>
+                    `,
+                    tech: ['SQL Server', 'PowerShell', 'Python', 'Tableau', 'Power Apps', 'SQL Server Agent'],
+                    github: null,
+                    demo: null
+                },
+                'portfolio-website': {
+                    title: 'Interactive Data Analyst Portfolio',
+                    description: 'Responsive portfolio website with interactive charts, project filtering, modal overlays, and mobile-optimized design showcasing technical expertise.',
+                    fullDescription: `
+                        <h4 class="text-lg font-bold text-white mb-3">Project Overview</h4>
+                        <p class="text-gray-400 mb-4">Built a comprehensive, interactive portfolio website from scratch to showcase data analyst expertise, projects, and professional experience. The site features modern web technologies, responsive design, and engaging user interactions.</p>
+                        
+                        <h4 class="text-lg font-bold text-white mb-3">What I Built</h4>
+                        <h5 class="text-md font-semibold text-blue-400 mb-2">Frontend Development:</h5>
+                        <ul class="text-gray-400 mb-4 space-y-1 ml-4">
+                            <li>• Developed single-page application with clean, modern UI using HTML5 and Tailwind CSS</li>
+                            <li>• Implemented responsive design ensuring optimal viewing across all devices and screen sizes</li>
+                            <li>• Created smooth scroll navigation with fixed header and mobile hamburger menu</li>
+                        </ul>
+                        
+                        <h5 class="text-md font-semibold text-blue-400 mb-2">Interactive Data Visualization:</h5>
+                        <ul class="text-gray-400 mb-4 space-y-1 ml-4">
+                            <li>• Integrated Chart.js to create interactive skills radar chart replacing static content</li>
+                            <li>• Built dynamic chart with hover effects, animations, and professional styling</li>
+                            <li>• Designed chart to accurately represent technical proficiency levels</li>
+                        </ul>
+                        
+                        <h5 class="text-md font-semibold text-blue-400 mb-2">Advanced JavaScript Features:</h5>
+                        <ul class="text-gray-400 mb-4 space-y-1 ml-4">
+                            <li>• Developed multi-category project filtering system with smooth animations</li>
+                            <li>• Created modal overlay system for detailed project information</li>
+                            <li>• Implemented dynamic content loading and smooth transitions throughout</li>
+                        </ul>
+                        
+                        <h5 class="text-md font-semibold text-blue-400 mb-2">User Experience & Performance:</h5>
+                        <ul class="text-gray-400 mb-4 space-y-1 ml-4">
+                            <li>• Optimized loading performance and smooth animations across all interactions</li>
+                            <li>• Added hover effects, card animations, and engaging micro-interactions</li>
+                            <li>• Implemented proper SEO meta tags and accessibility features</li>
+                        </ul>
+                        
+                        <h4 class="text-lg font-bold text-white mb-3">Technical Features</h4>
+                        <ul class="text-gray-400 mb-4 space-y-2">
+                            <li>• <strong>Responsive Grid Layout:</strong> CSS Grid and Flexbox for perfect alignment across devices</li>
+                            <li>• <strong>Interactive Skills Chart:</strong> Chart.js radar visualization with custom styling</li>
+                            <li>• <strong>Project Filtering:</strong> Multi-category filtering with smooth slide animations</li>
+                            <li>• <strong>Modal System:</strong> Dynamic project detail overlays with backdrop blur effects</li>
+                            <li>• <strong>Mobile Optimization:</strong> Touch-friendly interface with collapsible navigation</li>
+                        </ul>
+                        
+                        <h4 class="text-lg font-bold text-white mb-3">Impact & Results</h4>
+                        <ul class="text-gray-400 space-y-2">
+                            <li>• <strong>Professional Showcase:</strong> Comprehensive platform demonstrating both data analysis and web development skills</li>
+                            <li>• <strong>User Engagement:</strong> Interactive elements encourage exploration of projects and expertise</li>
+                            <li>• <strong>Technical Demonstration:</strong> Proves ability to work with modern web technologies beyond traditional data tools</li>
+                            <li>• <strong>Portfolio Evolution:</strong> Living project that can be continuously enhanced and updated</li>
+                        </ul>
+                    `,
+                    tech: ['HTML5', 'Tailwind CSS', 'JavaScript', 'Chart.js', 'CSS Grid', 'Responsive Design'],
+                    github: 'https://github.com/amankeskar/github-portfolio',
+                    demo: null
+                },
+                // Add more projects as needed...
+            };
+            
+            const project = projectDetails[projectId];
+            if (project) {
+                modalContent.innerHTML = `
+                    <div class="flex items-center justify-between mb-6">
+                        <h3 class="text-2xl font-bold text-white">${project.title}</h3>
+                        <button onclick="closeProjectModal()" class="text-gray-400 hover:text-white text-2xl">
+                            <i class="ri-close-line"></i>
+                        </button>
+                    </div>
+                    
+                    <div class="mb-6">
+                        ${project.fullDescription}
+                    </div>
+                    
+                    <div class="flex flex-wrap gap-2 mb-6">
+                        ${project.tech.map(tech => `<span class="px-3 py-1 bg-gray-700 text-gray-300 rounded-full text-xs font-medium">${tech}</span>`).join('')}
+                    </div>
+                    
+                    <div class="flex gap-3">
+                        ${project.github ? `<a href="${project.github}" target="_blank" class="flex-1 bg-green-600 hover:bg-green-700 text-white font-semibold py-3 px-4 rounded-lg transition-colors text-center">
+                            <i class="ri-github-line mr-2"></i>GitHub
+                        </a>` : ''}
+                        ${project.demo ? `<a href="${project.demo}" target="_blank" class="flex-1 bg-dark-blue hover:bg-dark-blue text-white font-semibold py-3 px-4 rounded-lg transition-colors text-center">
+                            <i class="ri-external-link-line mr-2"></i>Live Demo
+                        </a>` : ''}
+                    </div>
+                `;
+                
+                modal.classList.remove('hidden');
+                modal.classList.add('flex');
+                setTimeout(() => {
+                    modal.querySelector('.bg-gray-800').style.transform = 'scale(1)';
+                    modal.querySelector('.bg-gray-800').style.opacity = '1';
+                }, 10);
+            }
+        }
+        
+        function closeProjectModal() {
+            const modal = document.getElementById('projectModal');
+            modal.querySelector('.bg-gray-800').style.transform = 'scale(0.95)';
+            modal.querySelector('.bg-gray-800').style.opacity = '0';
+            setTimeout(() => {
+                modal.classList.add('hidden');
+                modal.classList.remove('flex');
+            }, 200);
+        }
+        
+        // Close modal when clicking outside
+        document.getElementById('projectModal')?.addEventListener('click', function(e) {
+            if (e.target === this) {
+                closeProjectModal();
+            }
+        });
+    </script>
+    
+    <!-- Project Details Modal -->
+    <div id="projectModal" class="fixed inset-0 bg-black/50 backdrop-blur-sm z-50 hidden items-center justify-center p-4">
+        <div class="bg-gray-800 border border-gray-700 rounded-2xl max-w-4xl w-full max-h-[90vh] overflow-y-auto transform scale-95 opacity-0 transition-all duration-200">
+            <div id="modalContent" class="p-8">
+                <!-- Modal content will be dynamically inserted here -->
+            </div>
+        </div>
+    </div>
+</body>
+</html>
