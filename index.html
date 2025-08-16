@@ -541,21 +541,62 @@
 
             <div class="flex flex-wrap justify-center gap-2 mb-8">
                 <button class="filter-btn px-4 py-2 rounded-full text-sm font-medium transition-colors whitespace-nowrap cursor-pointer bg-dark-blue text-white" data-filter="all">
-                    All Projects (6)
+                    All Projects (7)
                 </button>
                 <button class="filter-btn px-4 py-2 rounded-full text-sm font-medium transition-colors whitespace-nowrap cursor-pointer bg-gray-800 text-gray-400 hover:bg-gray-700 hover:text-gray-300" data-filter="ml">
                     Machine Learning (3)
                 </button>
                 <button class="filter-btn px-4 py-2 rounded-full text-sm font-medium transition-colors whitespace-nowrap cursor-pointer bg-gray-800 text-gray-400 hover:bg-gray-700 hover:text-gray-300" data-filter="analytics">
-                    Analytics (3)
+                    Analytics (4)
                 </button>
                 <button class="filter-btn px-4 py-2 rounded-full text-sm font-medium transition-colors whitespace-nowrap cursor-pointer bg-gray-800 text-gray-400 hover:bg-gray-700 hover:text-gray-300" data-filter="visualization">
-                    Visualization (6)
+                    Visualization (7)
                 </button>
             </div>
 
             <div id="projects-grid" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-                <!-- Project 1 -->
+                <!-- Project 1: NYC 311 Operations Analytics -->
+                <div class="project-card bg-gray-800 border border-gray-700 rounded-xl overflow-hidden shadow-sm hover:shadow-lg transition-shadow card-hover" data-category="analytics visualization">
+                    <div class="relative h-48 overflow-hidden">
+                        <img src="https://images.unsplash.com/photo-1477414348463-c0eb7f1359b6?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80" alt="NYC 311 Operations Analytics" class="w-full h-full object-cover">
+                        <div class="absolute top-4 right-4">
+                            <span class="bg-black/50 backdrop-blur-sm text-white px-2 py-1 rounded-full text-xs font-medium">2025</span>
+                        </div>
+                    </div>
+                    <div class="p-6">
+                        <div class="flex items-center justify-between mb-3">
+                            <h3 class="text-xl font-bold text-white">NYC 311 Operations Analytics</h3>
+                            <div class="flex items-center text-gray-400 text-sm whitespace-nowrap">
+                                <i class="ri-time-line mr-1"></i>3 weeks
+                            </div>
+                        </div>
+                        <p class="text-gray-400 mb-4 leading-relaxed">
+                            Built end-to-end SLA monitoring system for NYC 311 service requests. Modeled request lifecycles in PostgreSQL, computed breach analytics vs p75 baselines, automated Python ETL, and published executive dashboard in Tableau Public.
+                        </p>
+                        <div class="flex items-center justify-between mb-4">
+                            <div class="flex items-center space-x-2 text-green-400 font-semibold">
+                                <i class="ri-dashboard-line"></i>
+                                <span>SLA Monitoring</span>
+                            </div>
+                        </div>
+                        <div class="flex flex-wrap gap-2 mb-4">
+                            <span class="px-3 py-1 bg-gray-700 text-gray-300 rounded-full text-xs font-medium">PostgreSQL</span>
+                            <span class="px-3 py-1 bg-gray-700 text-gray-300 rounded-full text-xs font-medium">Python</span>
+                            <span class="px-3 py-1 bg-gray-700 text-gray-300 rounded-full text-xs font-medium">Tableau</span>
+                            <span class="px-3 py-1 bg-gray-700 text-gray-300 rounded-full text-xs font-medium">SQLAlchemy</span>
+                        </div>
+                        <div class="flex gap-2">
+                            <a href="https://public.tableau.com/app/profile/aman.keskar1334/viz/NYC311ServiceRequests_17553064218420/Dashboard1?publish=yes" target="_blank" class="flex-1 bg-green-600 hover:bg-green-700 text-white font-semibold py-2 px-4 rounded-lg transition-colors text-center">
+                                <i class="ri-bar-chart-line mr-2"></i>Live Demo
+                            </a>
+                            <button onclick="openProjectModal('nyc311')" class="flex-1 bg-dark-blue hover:bg-dark-blue text-white font-semibold py-2 px-4 rounded-lg transition-colors">
+                                <i class="ri-information-line mr-2"></i>Details
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Project 2: InsightIQ -->
                 <div class="project-card bg-gray-800 border border-gray-700 rounded-xl overflow-hidden shadow-sm hover:shadow-lg transition-shadow card-hover" data-category="ml visualization">
                     <div class="relative h-48 overflow-hidden">
                         <img src="https://images.unsplash.com/photo-1555949963-aa79dcee981c?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80" alt="InsightIQ" class="w-full h-full object-cover">
@@ -1208,6 +1249,41 @@
             
             // Project details data
             const projectDetails = {
+                'nyc311': {
+                    title: 'NYC 311 Operations Analytics — SLA Monitoring & Performance Dashboard',
+                    description: 'End-to-end operations analytics pipeline tracking service request SLAs for NYC 311, with PostgreSQL modeling, Python ETL automation, and executive dashboard in Tableau Public.',
+                    fullDescription: `
+                        <h4 class="text-lg font-bold text-white mb-3">Project Overview</h4>
+                        <p class="text-gray-400 mb-4">Built a comprehensive SLA monitoring system for NYC 311 service requests to help operations leaders track performance, identify bottlenecks, and optimize resource allocation. The system processes ~50k records and provides real-time insights into breach patterns and operational efficiency.</p>
+                        
+                        <h4 class="text-lg font-bold text-white mb-3">What I Built</h4>
+                        <ul class="text-gray-400 mb-4 space-y-2">
+                            <li>• <strong>Data Pipeline & Storage:</strong> Loaded NYC Open Data (50k+ records) into PostgreSQL with staging and fact tables, modeling request lifecycles from creation to closure</li>
+                            <li>• <strong>SLA Analytics Engine:</strong> Computed time-to-close metrics, dynamic p75 baselines per complaint type, breach flags, and backlog aging buckets (0-3d, 4-7d, 8-14d, 15d+)</li>
+                            <li>• <strong>Automated ETL Pipeline:</strong> Built Python automation with SQLAlchemy and pandas to refresh models and generate CSV extracts for dashboard consumption</li>
+                            <li>• <strong>Executive Dashboard:</strong> Published interactive Tableau Public dashboard with KPI cards, trend analysis, driver identification, and seasonality heatmaps</li>
+                            <li>• <strong>Performance Insights:</strong> Identified peak hours, complaint type breach patterns, and backlog concentration for actionable operational improvements</li>
+                        </ul>
+                        
+                        <h4 class="text-lg font-bold text-white mb-3">Key Metrics & Impact</h4>
+                        <ul class="text-gray-400 mb-4 space-y-2">
+                            <li>• <strong>SLA Monitoring:</strong> Automated breach detection against dynamic p75 baselines, enabling proactive performance management</li>
+                            <li>• <strong>Driver Analysis:</strong> Weighted breach calculations reveal which complaint types require immediate attention and resource reallocation</li>
+                            <li>• <strong>Operational Intelligence:</strong> Seasonality patterns guide staffing decisions, while aging analysis quantifies backlog risk</li>
+                            <li>• <strong>Reproducible Pipeline:</strong> One-command refresh enables daily operational reporting and continuous performance tracking</li>
+                        </ul>
+                        
+                        <h4 class="text-lg font-bold text-white mb-3">Technical Architecture</h4>
+                        <ul class="text-gray-400 mb-4 space-y-2">
+                            <li>• <strong>Data Layer:</strong> PostgreSQL with staged raw data and transformed fact tables optimized for analytics workloads</li>
+                            <li>• <strong>ETL Layer:</strong> Python scripts with environment-based configuration, parameterized queries, and automated CSV generation</li>
+                            <li>• <strong>Visualization Layer:</strong> Tableau Public with calculated fields for weighted metrics, top-N filtering, and interactive drill-downs</li>
+                        </ul>
+                    `,
+                    tech: ['PostgreSQL', 'Python', 'SQLAlchemy', 'Pandas', 'Tableau Public', 'pgAdmin', 'SQL'],
+                    github: null,
+                    demo: 'https://public.tableau.com/app/profile/aman.keskar1334/viz/NYC311ServiceRequests_17553064218420/Dashboard1?publish=yes'
+                },
                 'insightiq': {
                     title: 'InsightIQ — AI-Powered Document Q&A Assistant',
                     description: 'Architected end-to-end local RAG system for enterprise PDFs with token-aware semantic chunking, FAISS indexing, and traceable citations for grounded answers.',
