@@ -541,13 +541,16 @@
 
             <div class="flex flex-wrap justify-center gap-2 mb-8">
                 <button class="filter-btn px-4 py-2 rounded-full text-sm font-medium transition-colors whitespace-nowrap cursor-pointer bg-dark-blue text-white" data-filter="all">
-                    All Projects (8)
+                    All Projects (9)
                 </button>
                 <button class="filter-btn px-4 py-2 rounded-full text-sm font-medium transition-colors whitespace-nowrap cursor-pointer bg-gray-800 text-gray-400 hover:bg-gray-700 hover:text-gray-300" data-filter="ml">
                     Machine Learning (4)
                 </button>
                 <button class="filter-btn px-4 py-2 rounded-full text-sm font-medium transition-colors whitespace-nowrap cursor-pointer bg-gray-800 text-gray-400 hover:bg-gray-700 hover:text-gray-300" data-filter="analytics">
                     Analytics (4)
+                </button>
+                <button class="filter-btn px-4 py-2 rounded-full text-sm font-medium transition-colors whitespace-nowrap cursor-pointer bg-gray-800 text-gray-400 hover:bg-gray-700 hover:text-gray-300" data-filter="automation">
+                    Automation (1)
                 </button>
                 <button class="filter-btn px-4 py-2 rounded-full text-sm font-medium transition-colors whitespace-nowrap cursor-pointer bg-gray-800 text-gray-400 hover:bg-gray-700 hover:text-gray-300" data-filter="visualization">
                     Visualization (8)
@@ -596,7 +599,48 @@
                     </div>
                 </div>
 
-                <!-- Project 2: NYC 311 Operations Analytics -->
+                <!-- Project 2: Job Application Tracker -->
+                <div class="project-card bg-gray-800 border border-gray-700 rounded-xl overflow-hidden shadow-sm hover:shadow-lg transition-shadow card-hover" data-category="automation">
+                    <div class="relative h-48 overflow-hidden">
+                        <img src="https://images.unsplash.com/photo-1586281380349-632531db7ed4?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80" alt="Job Application Tracker" class="w-full h-full object-cover">
+                        <div class="absolute top-4 right-4">
+                            <span class="bg-black/50 backdrop-blur-sm text-white px-2 py-1 rounded-full text-xs font-medium">2025</span>
+                        </div>
+                    </div>
+                    <div class="p-6">
+                        <div class="flex items-center justify-between mb-3">
+                            <h3 class="text-xl font-bold text-white">Outlook-Notion Job Tracker</h3>
+                            <div class="flex items-center text-gray-400 text-sm whitespace-nowrap">
+                                <i class="ri-time-line mr-1"></i>2 weeks
+                            </div>
+                        </div>
+                        <p class="text-gray-400 mb-4 leading-relaxed">
+                            Python automation tool that integrates Microsoft Outlook with Notion to streamline job application tracking. Automatically extracts job details from emails and creates organized database entries with duplicate prevention.
+                        </p>
+                        <div class="flex items-center justify-between mb-4">
+                            <div class="flex items-center space-x-2 text-green-400 font-semibold">
+                                <i class="ri-robot-line"></i>
+                                <span>Full Automation</span>
+                            </div>
+                        </div>
+                        <div class="flex flex-wrap gap-2 mb-4">
+                            <span class="px-3 py-1 bg-gray-700 text-gray-300 rounded-full text-xs font-medium">Python</span>
+                            <span class="px-3 py-1 bg-gray-700 text-gray-300 rounded-full text-xs font-medium">Outlook API</span>
+                            <span class="px-3 py-1 bg-gray-700 text-gray-300 rounded-full text-xs font-medium">Notion API</span>
+                            <span class="px-3 py-1 bg-gray-700 text-gray-300 rounded-full text-xs font-medium">BeautifulSoup</span>
+                        </div>
+                        <div class="flex gap-2">
+                            <a href="https://github.com/amankeskar" target="_blank" class="flex-1 bg-green-600 hover:bg-green-700 text-white font-semibold py-2 px-4 rounded-lg transition-colors text-center">
+                                <i class="ri-github-line mr-2"></i>GitHub
+                            </a>
+                            <button onclick="openProjectModal('jobtracker')" class="flex-1 bg-dark-blue hover:bg-dark-blue text-white font-semibold py-2 px-4 rounded-lg transition-colors">
+                                <i class="ri-information-line mr-2"></i>Details
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Project 3: NYC 311 Operations Analytics -->
                 <div class="project-card bg-gray-800 border border-gray-700 rounded-xl overflow-hidden shadow-sm hover:shadow-lg transition-shadow card-hover" data-category="analytics visualization">
                     <div class="relative h-48 overflow-hidden">
                         <img src="https://images.unsplash.com/photo-1477414348463-c0eb7f1359b6?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80" alt="NYC 311 Operations Analytics" class="w-full h-full object-cover">
@@ -1338,6 +1382,57 @@
                         </ul>
                     `,
                     tech: ['XGBoost', 'Python', 'FastAPI', 'Docker', 'Kubernetes', 'Scikit-learn', 'SHAP', 'Pandas', 'NumPy', 'Matplotlib', 'Seaborn'],
+                    github: 'https://github.com/amankeskar',
+                    demo: null
+                },
+                'jobtracker': {
+                    title: 'Outlook-Notion Job Application Tracker — Automated Workflow Integration',
+                    description: 'Python automation tool that integrates Microsoft Outlook with Notion to streamline job application tracking through intelligent email parsing and database management.',
+                    fullDescription: `
+                        <h4 class="text-lg font-bold text-white mb-3">Project Overview</h4>
+                        <p class="text-gray-400 mb-4">Created a comprehensive automation solution that bridges Microsoft Outlook and Notion to eliminate manual job application tracking. The system intelligently processes job-related emails, extracts key information, and automatically maintains an organized database of applications with zero manual intervention.</p>
+                        
+                        <h4 class="text-lg font-bold text-white mb-3">Core Automation Features</h4>
+                        <ul class="text-gray-400 mb-4 space-y-2">
+                            <li>• <strong>Intelligent Email Processing:</strong> COM integration with Microsoft Outlook to scan inbox and identify job-related emails using pattern recognition and keyword detection</li>
+                            <li>• <strong>Smart Data Extraction:</strong> Advanced parsing algorithms using BeautifulSoup to extract job titles, company names, application dates, URLs, and relevant details from email content</li>
+                            <li>• <strong>Notion Database Integration:</strong> Seamless API integration to automatically create structured database entries with extracted information and proper categorization</li>
+                            <li>• <strong>Duplicate Prevention System:</strong> State management using JSON persistence to track processed emails and prevent duplicate entries across multiple runs</li>
+                        </ul>
+                        
+                        <h4 class="text-lg font-bold text-white mb-3">Technical Architecture</h4>
+                        <ul class="text-gray-400 mb-4 space-y-2">
+                            <li>• <strong>Microsoft Outlook Integration:</strong> pywin32 COM automation for real-time email access and processing without requiring email exports</li>
+                            <li>• <strong>Notion API Integration:</strong> RESTful API calls using requests library for database operations with proper error handling and retry logic</li>
+                            <li>• <strong>HTML Email Parsing:</strong> BeautifulSoup4 for robust HTML content extraction and text cleaning from complex email formats</li>
+                            <li>• <strong>Configuration Management:</strong> Environment variables and JSON configuration for flexible property mapping and secure credential storage</li>
+                        </ul>
+                        
+                        <h4 class="text-lg font-bold text-white mb-3">Productivity & Business Impact</h4>
+                        <ul class="text-gray-400 mb-4 space-y-2">
+                            <li>• <strong>Time Savings:</strong> Eliminates 2-3 hours weekly of manual job application tracking and data entry</li>
+                            <li>• <strong>Data Consistency:</strong> Standardized data format ensures accurate tracking and reporting of application status</li>
+                            <li>• <strong>Process Automation:</strong> Reduces human error and ensures no job applications are missed or forgotten</li>
+                            <li>• <strong>Scalable Solution:</strong> Handles unlimited email volume with configurable processing schedules and batch operations</li>
+                        </ul>
+                        
+                        <h4 class="text-lg font-bold text-white mb-3">Development Best Practices</h4>
+                        <ul class="text-gray-400 mb-4 space-y-2">
+                            <li>• <strong>Modular Design:</strong> Clean separation of concerns with dedicated modules for email processing, data extraction, and API integration</li>
+                            <li>• <strong>Error Handling:</strong> Comprehensive exception handling with logging for debugging and monitoring automation reliability</li>
+                            <li>• <strong>Security First:</strong> Environment variable management and .gitignore protection for sensitive credentials and API keys</li>
+                            <li>• <strong>Documentation:</strong> Complete README with setup instructions, configuration guide, and troubleshooting documentation</li>
+                        </ul>
+                        
+                        <h4 class="text-lg font-bold text-white mb-3">Skills Demonstrated</h4>
+                        <ul class="text-gray-400 mb-4 space-y-2">
+                            <li>• <strong>API Integration:</strong> Multi-platform API orchestration between Microsoft and Notion ecosystems</li>
+                            <li>• <strong>Process Automation:</strong> End-to-end workflow automation with state management and error recovery</li>
+                            <li>• <strong>Data Processing:</strong> Intelligent text parsing and extraction from unstructured email content</li>
+                            <li>• <strong>Software Development:</strong> Professional coding practices with version control, documentation, and deployment considerations</li>
+                        </ul>
+                    `,
+                    tech: ['Python', 'pywin32', 'Notion API', 'Requests', 'BeautifulSoup4', 'JSON', 'COM Automation'],
                     github: 'https://github.com/amankeskar',
                     demo: null
                 },
