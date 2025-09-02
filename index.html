@@ -541,21 +541,62 @@
 
             <div class="flex flex-wrap justify-center gap-2 mb-8">
                 <button class="filter-btn px-4 py-2 rounded-full text-sm font-medium transition-colors whitespace-nowrap cursor-pointer bg-dark-blue text-white" data-filter="all">
-                    All Projects (7)
+                    All Projects (8)
                 </button>
                 <button class="filter-btn px-4 py-2 rounded-full text-sm font-medium transition-colors whitespace-nowrap cursor-pointer bg-gray-800 text-gray-400 hover:bg-gray-700 hover:text-gray-300" data-filter="ml">
-                    Machine Learning (3)
+                    Machine Learning (4)
                 </button>
                 <button class="filter-btn px-4 py-2 rounded-full text-sm font-medium transition-colors whitespace-nowrap cursor-pointer bg-gray-800 text-gray-400 hover:bg-gray-700 hover:text-gray-300" data-filter="analytics">
                     Analytics (4)
                 </button>
                 <button class="filter-btn px-4 py-2 rounded-full text-sm font-medium transition-colors whitespace-nowrap cursor-pointer bg-gray-800 text-gray-400 hover:bg-gray-700 hover:text-gray-300" data-filter="visualization">
-                    Visualization (7)
+                    Visualization (8)
                 </button>
             </div>
 
             <div id="projects-grid" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-                <!-- Project 1: NYC 311 Operations Analytics -->
+                <!-- Project 1: Income Prediction ML Platform -->
+                <div class="project-card bg-gray-800 border border-gray-700 rounded-xl overflow-hidden shadow-sm hover:shadow-lg transition-shadow card-hover" data-category="ml analytics visualization">
+                    <div class="relative h-48 overflow-hidden">
+                        <img src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80" alt="Income Prediction ML Platform" class="w-full h-full object-cover">
+                        <div class="absolute top-4 right-4">
+                            <span class="bg-black/50 backdrop-blur-sm text-white px-2 py-1 rounded-full text-xs font-medium">2025</span>
+                        </div>
+                    </div>
+                    <div class="p-6">
+                        <div class="flex items-center justify-between mb-3">
+                            <h3 class="text-xl font-bold text-white">Income Prediction ML Platform</h3>
+                            <div class="flex items-center text-gray-400 text-sm whitespace-nowrap">
+                                <i class="ri-time-line mr-1"></i>1.5 months
+                            </div>
+                        </div>
+                        <p class="text-gray-400 mb-4 leading-relaxed">
+                            Production-ready ML platform with XGBoost classifier (87.5% accuracy), fairness analysis, real-time monitoring, executive dashboards, and Docker/Kubernetes deployment. Complete MLOps pipeline from bias detection to business intelligence.
+                        </p>
+                        <div class="flex items-center justify-between mb-4">
+                            <div class="flex items-center space-x-2 text-green-400 font-semibold">
+                                <i class="ri-award-line"></i>
+                                <span>$4M+ Business Value</span>
+                            </div>
+                        </div>
+                        <div class="flex flex-wrap gap-2 mb-4">
+                            <span class="px-3 py-1 bg-gray-700 text-gray-300 rounded-full text-xs font-medium">XGBoost</span>
+                            <span class="px-3 py-1 bg-gray-700 text-gray-300 rounded-full text-xs font-medium">FastAPI</span>
+                            <span class="px-3 py-1 bg-gray-700 text-gray-300 rounded-full text-xs font-medium">Docker</span>
+                            <span class="px-3 py-1 bg-gray-700 text-gray-300 rounded-full text-xs font-medium">MLOps</span>
+                        </div>
+                        <div class="flex gap-2">
+                            <a href="https://github.com/amankeskar" target="_blank" class="flex-1 bg-green-600 hover:bg-green-700 text-white font-semibold py-2 px-4 rounded-lg transition-colors text-center">
+                                <i class="ri-github-line mr-2"></i>GitHub
+                            </a>
+                            <button onclick="openProjectModal('mlplatform')" class="flex-1 bg-dark-blue hover:bg-dark-blue text-white font-semibold py-2 px-4 rounded-lg transition-colors">
+                                <i class="ri-information-line mr-2"></i>Details
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Project 2: NYC 311 Operations Analytics -->
                 <div class="project-card bg-gray-800 border border-gray-700 rounded-xl overflow-hidden shadow-sm hover:shadow-lg transition-shadow card-hover" data-category="analytics visualization">
                     <div class="relative h-48 overflow-hidden">
                         <img src="https://images.unsplash.com/photo-1477414348463-c0eb7f1359b6?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80" alt="NYC 311 Operations Analytics" class="w-full h-full object-cover">
@@ -1249,6 +1290,57 @@
             
             // Project details data
             const projectDetails = {
+                'mlplatform': {
+                    title: 'Income Prediction ML Platform — Production-Ready MLOps Pipeline',
+                    description: 'Comprehensive ML platform with XGBoost classifier, fairness analysis, real-time monitoring, executive dashboards, and production deployment using Docker/Kubernetes.',
+                    fullDescription: `
+                        <h4 class="text-lg font-bold text-white mb-3">Project Overview</h4>
+                        <p class="text-gray-400 mb-4">Built a production-ready machine learning platform for income prediction that goes beyond basic model training to address real-world ML challenges including bias detection, model monitoring, business intelligence, and scalable deployment. Achieved 87.5% accuracy while ensuring fairness and providing comprehensive business insights.</p>
+                        
+                        <h4 class="text-lg font-bold text-white mb-3">Core ML Development</h4>
+                        <ul class="text-gray-400 mb-4 space-y-2">
+                            <li>• <strong>Algorithm & Performance:</strong> XGBoost classifier for binary income prediction (>$50K vs ≤$50K) with 87.5% accuracy and strong precision/recall metrics</li>
+                            <li>• <strong>Data Processing:</strong> Adult Census dataset with comprehensive preprocessing, feature engineering, and proper train/test splits</li>
+                            <li>• <strong>Model Evaluation:</strong> Multi-metric assessment including accuracy, precision, recall, F1-score, and ROC-AUC for robust performance validation</li>
+                            <li>• <strong>Interpretability:</strong> SHAP integration for model explainability and feature importance analysis</li>
+                        </ul>
+                        
+                        <h4 class="text-lg font-bold text-white mb-3">Advanced ML Engineering Features</h4>
+                        <ul class="text-gray-400 mb-4 space-y-2">
+                            <li>• <strong>Fairness & Bias Analysis (fairness_analysis.py):</strong> Demographic parity analysis across gender and race groups, equalized odds assessment, custom algorithms for bias quantification, and business impact summaries</li>
+                            <li>• <strong>Model Monitoring Infrastructure (model_monitoring.py):</strong> Real-time performance tracking, data drift detection algorithms, automated health checks, degradation alerts, and JSON audit trails</li>
+                            <li>• <strong>Executive Dashboard (executive_dashboard.py):</strong> Business language translation, ROI analysis with $4M+ value calculation, board-ready visualizations, and competitive advantage quantification</li>
+                            <li>• <strong>Production Deployment (deployment_manager.py):</strong> FastAPI REST endpoints, Docker containerization, Kubernetes orchestration, security features, and multi-environment configurations</li>
+                        </ul>
+                        
+                        <h4 class="text-lg font-bold text-white mb-3">Business Intelligence & Impact</h4>
+                        <ul class="text-gray-400 mb-4 space-y-2">
+                            <li>• <strong>ROI Analysis:</strong> Calculated potential $4M+ annual business value through automated decision-making and operational efficiency</li>
+                            <li>• <strong>Risk Assessment:</strong> Quantified bias-related financial and reputational risks with mitigation strategies</li>
+                            <li>• <strong>Compliance Framework:</strong> Built-in regulatory compliance features for AI governance and responsible AI practices</li>
+                            <li>• <strong>Strategic Insights:</strong> Executive summaries and decision-making support tools for stakeholder communication</li>
+                        </ul>
+                        
+                        <h4 class="text-lg font-bold text-white mb-3">Technical Architecture & Innovation</h4>
+                        <ul class="text-gray-400 mb-4 space-y-2">
+                            <li>• <strong>Modular Design:</strong> Clean, scalable architecture with separate modules for fairness, monitoring, business intelligence, and deployment</li>
+                            <li>• <strong>Production-Ready:</strong> Enterprise-grade design patterns with robust error handling, logging, and documentation</li>
+                            <li>• <strong>Scalable Infrastructure:</strong> Docker/Kubernetes deployment for production-scale operations with auto-scaling capabilities</li>
+                            <li>• <strong>Comprehensive Testing:</strong> End-to-end testing pipeline ensuring reliability and maintainability</li>
+                        </ul>
+                        
+                        <h4 class="text-lg font-bold text-white mb-3">Skills Demonstrated</h4>
+                        <ul class="text-gray-400 mb-4 space-y-2">
+                            <li>• <strong>MLOps Excellence:</strong> Complete ML lifecycle from development to production deployment and monitoring</li>
+                            <li>• <strong>Responsible AI:</strong> Proactive bias detection, fairness analysis, and ethical AI implementation</li>
+                            <li>• <strong>Business Integration:</strong> Technical-to-business translation with ROI analysis and stakeholder communication</li>
+                            <li>• <strong>System Architecture:</strong> Enterprise-level design with scalability, security, and maintainability focus</li>
+                        </ul>
+                    `,
+                    tech: ['XGBoost', 'Python', 'FastAPI', 'Docker', 'Kubernetes', 'Scikit-learn', 'SHAP', 'Pandas', 'NumPy', 'Matplotlib', 'Seaborn'],
+                    github: 'https://github.com/amankeskar',
+                    demo: null
+                },
                 'nyc311': {
                     title: 'NYC 311 Operations Analytics — SLA Monitoring & Performance Dashboard',
                     description: 'End-to-end operations analytics pipeline tracking service request SLAs for NYC 311, with PostgreSQL modeling, Python ETL automation, and executive dashboard in Tableau Public.',
